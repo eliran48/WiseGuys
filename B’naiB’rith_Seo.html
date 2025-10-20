@@ -21,6 +21,10 @@
         .rtl {
             direction: rtl;
         }
+        .explanation-text {
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 rtl">
@@ -30,9 +34,7 @@
         <!-- Header -->
         <header class="mb-12 text-center border-b-2 border-blue-100 pb-8">
             <div class="flex justify-center items-center gap-8 mb-6">
-                 <!-- Logo added here -->
                 <img src="https://wiseguys.co.il/wp-content/uploads/2025/05/cropped-WiseGuyes-10-140x113.png" alt="לוגו Wise Guys" class="h-20">
-                 <!-- Bnai Brith Logo updated -->
                 <img src="https://wiseguys.co.il/wp-content/uploads/2025/10/BnryBrith-logo-blue-1.svg" alt="לוגו בני ברית ישראל" class="h-20">
             </div>
             <h1 class="text-4xl md:text-5xl font-bold brand-text mb-2">הצעה אסטרטגית לקידום אורגני (SEO)</h1>
@@ -48,30 +50,49 @@
             </p>
         </section>
 
-        <!-- Section 2: The Challenge -->
+        <!-- Section 2: The Challenge (Interactive) -->
         <section class="mb-16 bg-white p-8 rounded-xl shadow-md">
-            <h2 class="text-3xl font-bold mb-8 text-center brand-text">האתגר: "להופיע בגוגל" – פיצוח אסטרטגי</h2>
+            <h2 class="text-3xl font-bold mb-2 text-center brand-text">האתגר: "להופיע בגוגל" – פיצוח אסטרטגי</h2>
+            <p class="text-center text-gray-600 mb-8">לחצו על כל קובייה לקבלת הסבר מפורט על האסטרטגיה</p>
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 border border-gray-200 rounded-lg">
-                    <div class="flex justify-center mb-4">
-                        <svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <!-- Box 1: Brand -->
+                <div>
+                    <div id="brand-box" class="p-6 border border-gray-200 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-blue-500">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 brand-text">1. ביטויי מותג ישירים (Brand)</h3>
+                        <p class="text-gray-600"><strong>הביטויים:</strong> "בני ברית ישראל", "B'nai B'rith Israel"<br><strong>המטרה:</strong> להבטיח נוכחות יציבה ודומיננטית בעמוד הראשון.</p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 brand-text">1. ביטויי מותג ישירים (Brand)</h3>
-                    <p class="text-gray-600"><strong>הביטויים:</strong> "בני ברית ישראל", "B'nai B'rith Israel"<br><strong>המטרה:</strong> להבטיח נוכחות יציבה ודומיננטית בעמוד הראשון.</p>
+                    <div id="brand-text-explanation" class="hidden explanation-text mt-4 p-4 bg-gray-100 rounded-lg text-right text-gray-700">
+                        <p><strong>האסטרטגיה:</strong> להבטיח שליטה מלאה. כאשר מישהו מחפש אתכם בשם, הוא חייב למצוא אתכם מיד, בתוצאה הראשונה, עם פרופיל מרשים שכולל קישורים לאתר (sitelinks) ומידע מלא בפרופיל העסקי בגוגל. זהו הבסיס לבניית אמון וסמכות.</p>
+                    </div>
                 </div>
-                <div class="p-6 border-2 border-blue-500 rounded-lg bg-blue-50">
-                    <div class="flex justify-center mb-4">
-                        <svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path></svg>
+                <!-- Box 2: Long-Tail -->
+                <div>
+                    <div id="longtail-box" class="p-6 border-2 border-blue-500 bg-blue-50 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-lg">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 brand-text">2. ביטויי הזדמנות ותוכן</h3>
+                        <p class="text-gray-600"><strong>דוגמאות:</strong> "סיפורי הצלת יהודים בשואה", "התנדבות בחיפה", "מרצים על אנטישמיות", "תולדות בני ברית ירושלים"<br><strong>המטרה: לחשוף את אוצרות התוכן באתר לקהלים שמחפשים בדיוק אותם.</strong></p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 brand-text">2. ביטויי פעילות (Long-Tail)</h3>
-                    <p class="text-gray-600"><strong>הביטויים:</strong> "הרצאות בנושא הסברה", "שמות מרצים מתוך המאגר שלכם", "volunteering in Israel"<br><strong>ההזדמנות להביא תנועה חדשה דרך חיפושי תוכן ספציפיים, כמו מאגר המרצים וההרצאות.</strong></p>
+                    <div id="longtail-text-explanation" class="hidden explanation-text mt-4 p-4 bg-gray-100 rounded-lg text-right text-gray-700">
+                         <p><strong>האסטרטגיה:</strong> כאן נמצא מנוע הצמיחה המרכזי. האתר שלכם הוא אוצר של תוכן ייחודי - מהיסטוריית הלשכות, דרך פרויקט "אות המציל היהודי" ועד למאגר המרצים. האסטרטגיה שלנו היא להפוך כל פיסת תוכן כזו ל"שער כניסה" מגוגל. ניצור תוכן ממוקד שיענה על שאלות כמו "מי היו מצילים יהודים בשואה?" או "איפה אפשר להתנדב למען קשישים בתל אביב?", ונמשוך תנועה איכותית של אנשים עם כוונת חיפוש גבוהה.</p>
+                    </div>
                 </div>
-                <div class="p-6 border border-gray-200 rounded-lg">
-                    <div class="flex justify-center mb-4">
-                        <svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2H19.95M12 6v5m0 0v5m0-5h5M12 11H7"></path></svg>
+                <!-- Box 3: Core -->
+                <div>
+                    <div id="core-box" class="p-6 border border-gray-200 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-blue-500">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2H19.95M12 6v5m0 0v5m0-5h5M12 11H7"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 brand-text">3. ביטויי ליבה (Core)</h3>
+                        <p class="text-gray-600"><strong>הביטויים:</strong> "בני ברית", "B'nai B'rith"<br><strong>האתגר:</strong> תחרותי. דורש בניית סמכות ארוכת טווח מול הארגון העולמי וויקיפדיה.</p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 brand-text">3. ביטויי ליבה (Core)</h3>
-                    <p class="text-gray-600"><strong>הביטויים:</strong> "בני ברית", "B'nai B'rith"<br><strong>האתגר:</strong> תחרותי. דורש בניית סמכות ארוכת טווח מול הארגון העולמי וויקיפדיה.</p>
+                     <div id="core-text-explanation" class="hidden explanation-text mt-4 p-4 bg-gray-100 rounded-lg text-right text-gray-700">
+                        <p><strong>האסטרטגיה:</strong> התחרות כאן היא הגבוהה ביותר, והעבודה היא לטווח ארוך. האסטרטגיה היא בניית סמכות (Authority) באופן עקבי. באמצעות תוכן איכותי וקבלת קישורים מאתרים מובילים, נאותת לגוגל שהאתר שלכם הוא מקור מידע חשוב, מה שישפר בהדרגה את מיקומכם.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -237,8 +258,47 @@
                 <p class="mt-6 font-bold brand-text">אלירן אור | יוסי הללי | רועי הללי - Wiseguys.co.il - מומחים בקידום עסקים</p>
             </div>
         </footer>
-
     </div>
+<script>
+    const brandBox = document.getElementById('brand-box');
+    const longTailBox = document.getElementById('longtail-box');
+    const coreBox = document.getElementById('core-box');
 
+    const brandText = document.getElementById('brand-text-explanation');
+    const longTailText = document.getElementById('longtail-text-explanation');
+    const coreText = document.getElementById('core-text-explanation');
+
+    const allBoxes = [brandBox, longTailBox, coreBox];
+    const allTexts = [brandText, longTailText, coreText];
+
+    allBoxes.forEach((box, index) => {
+        box.addEventListener('click', () => {
+            const currentText = allTexts[index];
+            const isCurrentlyHidden = currentText.classList.contains('hidden');
+
+            // Hide all other texts
+            allTexts.forEach((text, i) => {
+                if (i !== index) {
+                    text.classList.add('hidden');
+                }
+            });
+
+            // Remove active styles from other boxes
+            allBoxes.forEach((b, i) => {
+                if (i !== index) {
+                    b.classList.remove('border-blue-500', 'border-2', 'bg-blue-50');
+                    b.classList.add('border-gray-200');
+                }
+            });
+
+            // Toggle the clicked one
+            currentText.classList.toggle('hidden');
+            box.classList.toggle('border-blue-500');
+            box.classList.toggle('border-2');
+            box.classList.toggle('bg-blue-50');
+            box.classList.toggle('border-gray-200');
+        });
+    });
+</script>
 </body>
 </html>
