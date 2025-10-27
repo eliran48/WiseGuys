@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הצעת מחיר: הקמת אתר חדש למוזיאון העמק</title>
+    <!-- טעינת Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- טעינת פונט Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            direction: rtl; /* כיוון מימין לשמאל */
+        }
+        /* הגדרת צבעי המותג של Wise Guys */
+        :root {
+            --brand-orange: #E65A20;
+            --brand-dark: #231F20;
+        }
+        .bg-brand-orange { background-color: var(--brand-orange); }
+        .text-brand-orange { color: var(--brand-orange); }
+        .bg-brand-dark { background-color: var(--brand-dark); }
+        .text-brand-dark { color: var(--brand-dark); }
+        .border-brand-orange { border-color: var(--brand-orange); }
+        
+        /* עיצוב מותאם לתיבות סימון */
+        .module-checkbox {
+            width: 1.5rem;
+            height: 1.5rem;
+            accent-color: var(--brand-orange);
+            cursor: pointer;
+        }
+        .module-item {
+            transition: all 0.2s ease-in-out;
+            border-right-width: 4px;
+            border-color: transparent;
+        }
+        .module-item:hover, .module-item.checked {
+            background-color: #fef8f5;
+            border-color: var(--brand-orange);
+        }
+        /* כפתור אישור */
+        .submit-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1);
+        }
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px 0 rgba(0,0,0,0.15);
+        }
+        /* הסתרת שדות חתימה ותאריך עד למילוי */
+        #approvalSection:not(:focus-within) #signatureField,
+        #approvalSection:not(:focus-within) #dateField {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto max-w-5xl bg-white shadow-2xl rounded-lg my-10 overflow-hidden">
+        
+        <!-- === HEADER === -->
+        <header class="p-8 sm:p-12 border-b-4 border-brand-orange">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                <!-- לוגו הספק -->
+                <div>
+                    <img src="https://wiseguys.co.il/wp-content/uploads/2025/05/cropped-WiseGuyes-10-300x242.png" alt="Wise Guys Logo" class="h-16 w-auto">
+                    <p class="text-sm text-gray-600 mt-2">Wiseguys.co.il - מומחים לקידום עסקים</p>
+                </div>
+                <!-- לוגו הלקוח -->
+                <div class="sm:text-left">
+                    <img src="https://pioneers.co.il/wp-content/uploads/2025/03/Logo-haemek-NEW-scaled-768x680.png" alt="לוגו מוזיאון העמק" class="h-20 w-auto">
+                </div>
+            </div>
+            
+            <!-- כותרת ההצעה -->
+            <div class="mt-8">
+                <h1 class="text-3xl sm:text-4xl font-bold text-brand-dark">הצעת מחיר</h1>
+                <p class="text-xl sm:text-2xl text-gray-700">הקמת אתר תדמית חדש למוזיאון העמק</p>
+            </div>
+
+            <!-- פרטי ההצעה -->
+            <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
+                <div>
+                    <span class="font-semibold text-gray-500 block">תאריך:</span>
+                    <span class="font-medium text-gray-800" id="proposalDate"></span>
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-500 block">מוגש עבור:</span>
+                    <span class="font-medium text-gray-800">מוזיאון העמק</span>
+                    <span class="text-xs text-gray-600 block">(איריס, שני ושרון)</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-500 block">מוגש מאת:</span>
+                    <span class="font-medium text-gray-800">Wise Guys</span>
+                    <span class="text-xs text-gray-600 block">אור אלירן</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- === MAIN CONTENT === -->
+        <main class="p-8 sm:p-12">
+
+            <!-- פתיח -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-brand-dark mb-4">שלום לאיריס, שני ושרון,</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    בהמשך לשיחתנו ופגישת האפיון המפורטת, אנו שמחים להגיש לכם הצעת מחיר להקמת אתר האינטרנט החדש של מוזיאון העמק. כחלק מהחזון להנגיש את פעילות המוזיאון לקהל הרחב ולהרחיב את החשיפה, אנו מציעים בנייה של אתר תדמיתי-שירותי, מקצועי ואינטראקטיבי.
+                    האתר ייבנה על פלטפורמת WordPress עם תוסף Elementor, תוך דגש על חוויית משתמש, התאמה מלאה לניידים, והנעה לפעולה, בהתאם לתקציב המוגדר.
+                </p>
+            </section>
+
+            <!-- === הצעה אינטראקטיבית === -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-brand-dark mb-6">ההצעה המודולרית שלנו</h2>
+                <p class="text-gray-600 mb-6">
+                    כדי לאפשר לכם גמישות מלאה ובחירה בהתאם לתקציב ולדרישות, פירקנו את ההצעה למודולים.
+                    אנא סמנו את המודולים הרצויים לכם כדי לקבל את הסכום הסופי.
+                </p>
+
+                <div class="space-y-4" id="modulesContainer">
+                    
+                    <!-- מודול בסיס (חובה) -->
+                    <div class="module-item checked border border-gray-200 rounded-lg p-5 flex items-start gap-4">
+                        <input type="checkbox" id="base_package" class="module-checkbox mt-1" data-price="15898.31" onchange="calculateTotal()" checked disabled>
+                        <div class="flex-1">
+                            <label for="base_package" class="font-bold text-lg text-brand-dark cursor-pointer">
+                                חבילת בסיס (חובה) - אפיון, עיצוב ופיתוח
+                            </label>
+                            <p class="text-sm text-gray-600 mt-1">אפיון, עיצוב ובניית תשתית האתר על וורדפרס ואלמנטור. כולל:</p>
+                            <ul class="list-disc list-inside text-sm text-gray-700 mt-2 space-y-1">
+                                <li>אפיון ועיצוב מלא לאתר החדש, מותאם למובייל, עם תמונות גדולות וצבעוניות תואמת מיתוג.</li>
+                                <li>בנייה בסביבת פיתוח נפרדת על הדומיין הקיים (pioneers.co.il) ללא פגיעה בפעילות האתר הנוכחי.</li>
+                                <li>הקמת דף נחיתה ייעודי לסדנאות גיבוש לחברות וארגונים.</li>
+                                <li>הקמת מערכת טפסים פשוטה ליצירת קשר, הזמנת הדרכות ואירועים חינוכיים (לקבוצות בתי ספר), עם שילוב כפתורי יצירת קשר מהירים (וואטסאפ/מייל).</li>
+                                <li>הקמת קטגוריית גלריה לאירועי עבר וארכיון אירועים מסודר.</li>
+                                <li>הפנייה (קישור) למערכת הארכיון החיצונית של המועצה לשימור אתרים.</li>
+                                <li>יצירת תשתית לאינטראקטיביות (בסיס לסריקת QR עתידית, תכנים דינמיים) תוך שמירה על עלויות תחזוקה נמוכות.</li>
+                                <li>יצירת תבניות פשוטות לניהול, עיצוב ועדכון תכנים שוטף (עבור איריס ושרון).</li>
+                            </ul>
+                        </div>
+                        <div class="font-bold text-lg text-gray-800 text-left">₪15,898.31</div>
+                    </div>
+
+                    <!-- מודול 1: קטלוגים -->
+                    <div class="module-item border border-gray-200 rounded-lg p-5 flex items-start gap-4">
+                        <input type="checkbox" id="module_catalogs" class="module-checkbox mt-1" data-price="10000" onchange="calculateTotal()">
+                        <div class="flex-1">
+                            <label for="module_catalogs" class="font-bold text-lg text-brand-dark cursor-pointer">
+                                מודול 1: פלטפורמות תוכן וקטלוגים
+                            </label>
+                            <p class="text-sm text-gray-600 mt-1">שדרוג התוכן הסטטי למערכות דינמיות ומרשימות:</p>
+                            <ul class="list-disc list-inside text-sm text-gray-700 mt-2 space-y-1">
+                                <li>הטמעה או קישור של "פלטפורמת סיפור היישובים" (במקום השרת הנפרד) לחיסכון בעלויות.</li>
+                                <li>הקמת סקשן ייעודי ל"פלטפורמת כלים חקלאיים" (תצוגת פריטים, תמונות, פירוט ואפשרות לווידאו בעתיד).</li>
+                                <li>שדרוג דף הקורסים וההדרכות (פעילויות, סדנאות) לקטלוג דינמי ומשודרג, הניתן לסינון, בעיצוב אחיד וידידותי וכולל אפשרות להזמנת הדרכה.</li>
+                            </ul>
+                        </div>
+                        <div class="font-bold text-lg text-gray-800 text-left">₪10,000</div>
+                    </div>
+
+                    <!-- מודול 2: אירועים והרשמה -->
+                    <div class="module-item border border-gray-200 rounded-lg p-5 flex items-start gap-4">
+                        <input type="checkbox" id="module_events" class="module-checkbox mt-1" data-price="5000" onchange="calculateTotal()">
+                        <div class="flex-1">
+                            <label for="module_events" class="font-bold text-lg text-brand-dark cursor-pointer">
+                                מודול 2: מערכת אירועים והרשמה
+                            </label>
+                            <p class="text-sm text-gray-600 mt-1">ניהול מלא של מחזור חיי האירועים וההרשמות במוזיאון:</p>
+                            <ul class="list-disc list-inside text-sm text-gray-700 mt-2 space-y-1">
+                                <li>הקמת לוח אירועים דינמי וברור (עם ניווט חודשי) והדגשת אירועים נבחרים בעמוד הבית.</li>
+                                <li>אינטגרציה משופרת (קישור) למערכת "תיקצ'ק" לאירועים בתשלום.</li>
+                                <li>הקמת מערכת הרשמה פנימית לאירועים בחינם (כולל הגבלת משתתפים וניהול מלאי).</li>
+                                <li>הקמת מערך הרשמה ל"מזוודת הבריחה" עם בחירת תאריך ושעה, מספר משתתפים, שילוב "תיקצ'ק" לתשלום וניהול מלאי.</li>
+                            </ul>
+                        </div>
+                        <div class="font-bold text-lg text-gray-800 text-left">₪5,000</div>
+                    </div>
+                    
+                    <!-- תוספת: נגישות -->
+                    <div class="module-item border border-gray-200 rounded-lg p-5 flex items-start gap-4">
+                        <input type="checkbox" id="module_accessibility" class="module-checkbox mt-1" data-price="3000" onchange="calculateTotal()">
+                        <div class="flex-1">
+                            <label for="module_accessibility" class="font-bold text-lg text-brand-dark cursor-pointer">
+                                תוספת: הנגשת האתר (רמה AA)
+                            </label>
+                            <p class="text-sm text-gray-600 mt-1">התאמת האתר באופן מלא לתקן הנגישות AA, כולל הטמעת תוסף נגישות ייעודי וביצוע התאמות קוד נדרשות (לא כולל הנגשת מסמכים).</p>
+                        </div>
+                        <div class="font-bold text-lg text-gray-800 text-left">₪3,000</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === סיכום עלויות === -->
+            <section class="mb-12">
+                <div class="bg-gray-50 border border-brand-orange rounded-lg p-8">
+                    <h3 class="text-xl font-semibold text-brand-dark mb-6">סיכום עלויות</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center text-lg">
+                            <span class="text-gray-700">סך ביניים (לפני מע"מ):</span>
+                            <span class="font-bold text-gray-900" id="subtotal">₪0</span>
+                        </div>
+                        <div class="flex justify-between items-center text-lg">
+                            <span class="text-gray-700">מע"מ (18%):</span>
+                            <span class="font-bold text-gray-900" id="vat">₪0</span>
+                        </div>
+                        <hr class="my-3 border-gray-300">
+                        <div class="flex justify-between items-center text-2xl font-bold">
+                            <span class="text-brand-dark">סה"כ לתשלום (כולל מע"מ):</span>
+                            <span class="text-brand-orange" id="total">₪0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === תנאים ופרטים נוספים === -->
+            <section class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-4">תנאי תשלום ולוחות זמנים</h3>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-7.99-8a1 1 0 011-1h14a1 1 0 110 2H3.01a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700"><strong class="text-gray-900">תשלום:</strong> 100% מהסכום הכולל (כולל מע"מ) יועבר במלואו מראש, כתנאי להתחלת העבודה.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700"><strong class="text-gray-900">לוח זמנים:</strong> עד 60 ימי עסקים, מרגע קבלת התשלום וכל החומרים הנדרשים מהלקוח (טקסטים, תמונות, גישות).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700"><strong class="text-gray-900">פרטי תשלום:</strong> אור אלירן, בנק דיסקונט (11), סניף מרום נווה (96), חשבון 74215630.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-4">תמיכה והדרכה</h3>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700">תמיכה שוטפת במייל ובקבוצת וואטסאפ ייעודית למשך <strong class="text-gray-900">חודש אחד</strong> מיום עליית האתר לאוויר.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === למה לבחור בנו? === -->
+            <section class="mb-12 bg-brand-dark text-white rounded-lg p-8 sm:p-12">
+                <h2 class="text-2xl font-semibold mb-6 text-brand-orange">למה לבחור ב-Wise Guys?</h2>
+                <p class="leading-relaxed opacity-90 mb-4">
+                    אנו מביאים איתנו ניסיון מקצועי של למעלה מ-12 שנה בשיווק, קריאייטיב וטכנולוגיה, עם רקורד עשיר של הצלחות מול לקוחות מכל הסוגים - ממותגים גדולים ועד עסקים מקומיים. הגישה שלנו ייחודית: אנו משלבים חשיבה שיווקית עמוקה עם עיצוב מדויק ופיתוח טכנולוגי מתקדם כדי לבנות אתרים שלא רק נראים טוב, אלא גם ממירים.
+                </p>
+                <p class="leading-relaxed opacity-90">
+                    תהליך העבודה שלנו מובנה, מסודר ושקוף, ומלווה אתכם שלב אחר שלב – מאפיון ועד השקה והדרכה. אנחנו מחויבים לזמינות, מהירות תגובה ותמיכה גם לאחר העלייה לאוויר, ומציעים שירות מותאם אישית, תוך הקפדה על פרטים, עמידה בלוחות זמנים, ושירות בגובה העיניים. אצלנו תקבלו לא רק אתר אלא שותף אסטרטגי לדרך.
+                </p>
+            </section>
+
+            <!-- === תנאים כלליים === -->
+            <section class="mb-12">
+                <h3 class="text-xl font-semibold text-brand-dark mb-4">תנאים כלליים</h3>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-2">
+                    <li>ההצעה תקפה ל-14 ימים מהתאריך המצוין בראש ההצעה.</li>
+                    <li>האתר יכלול עד 3 סבבי תיקונים על בסיס האפיון והעיצוב שאושרו. כל סבב תיקונים נוסף יחויב ב-250 ש"ח + מע"מ.</li>
+                    <li>המחיר אינו כולל עלות אחסון ודומיין. אנו נספק תמיכה מלאה ברכישה וחיבור שלהם על שם הלקוח.</li>
+                    <li>המחיר אינו כולל רכישת פונטים מיוחדים או תמונות מאגרי פרימיום, במידה ויידרשו.</li>
+                    <li>כל עיכוב מצד הלקוח בהעברת חומרים (טקסטים, תמונות, וידאו) או אישורים, עשוי לגרום לעיכוב בלוח הזמנים של הפרויקט.</li>
+                    
+                    <!-- עדכון סעיפי נגישות ומדיניות פרטיות -->
+                    <li><strong>מדיניות פרטיות:</strong> על הלקוח לדאוג להוספת ניסוח מדיניות פרטיות באתר בהתאם לחוק.</li>
+                    <li><strong>הנגשת האתר:</strong> לפי החוק אתרים בישראל נדרשים להיות מונגשים בהתאם לחוק הנגישות. אנו ממליצים לשמור תקציב של 3,000 ש"ח לטובת התקשרות עם ספק שדואג להנגשת האתר ולהגנה משפטית (סכום זה תואם את הצעת המודול שלנו).</li>
+
+                    <li>אחריות הלקוח לוודא זכויות יוצרים על כל החומרים הנשלחים אלינו ומועלים לאתר.</li>
+                    <li>לאחר סיום הפרויקט, אין אנו אחראים לכל נזק שייגרם לאתר כתוצאה משימוש לא נכון, עדכוני תוספים או תקלות שרת.</li>
+                    <li>תוספות או שינויים מעבר למה שסוכם בהצעה זו יתומחרו בנפרד לפי תעריף 400 ש"ח + מע"מ לשעת פיתוח.</li>
+                </ul>
+            </section>
+
+            <!-- === טופס אישור === -->
+            <section id="approvalSection" class="bg-gray-50 border border-gray-200 rounded-lg p-8 sm:p-12">
+                <h2 class="text-2xl font-semibold text-brand-dark mb-6">אישור הצעה והתחלת עבודה</h2>
+                <p class="text-gray-700 mb-6">אנו שמחים ומוכנים לצאת לדרך המשותפת. לאישור ההצעה, אנא מלאו את פרטיכם מטה ולחצו על הכפתור.</p>
+                
+                <form id="approvalForm" action="https://formspree.io/f/mblpdllb" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- שם החברה -->
+                        <div class="md:col-span-3">
+                            <label for="companyName" class="block text-sm font-medium text-gray-700">שם החברה</label>
+                            <input type="text" name="companyName" id="companyName" value="מוזיאון העמק" readonly 
+                                   class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 cursor-not-allowed p-3">
+                        </div>
+                        
+                        <!-- חתימה (שם מלא) -->
+                        <div id="signatureField" class="md:col-span-2">
+                            <label for="signature" class="block text-sm font-medium text-gray-700">חתימה (הקלדת שם מלא)</label>
+                            <input type="text" name="signature" id="signature" placeholder="שם מלא של המאשר" required 
+                                   class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-orange focus:ring-brand-orange p-3">
+                            <p class="text-xs text-gray-500 mt-1">הקלדת השם המלא מהווה חתימה משפטית לאישור הצעה זו.</p>
+                        </div>
+                        
+                        <!-- תאריך -->
+                        <div id="dateField">
+                            <label for="approvalDate" class="block text-sm font-medium text-gray-700">תאריך אישור</label>
+                            <input type="text" name="approvalDate" id="approvalDate" readonly 
+                                   class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 cursor-not-allowed p-3">
+                        </div>
+                    </div>
+                    
+                    <!-- שדות נסתרים לסיכום ההזמנה -->
+                    <input type="hidden" name="project" value="הקמת אתר - מוזיאון העמק">
+                    <input type="hidden" name="selected_modules" id="selected_modules_hidden">
+                    <input type="hidden" name="total_price_before_vat" id="total_price_before_vat_hidden">
+                    <input type="hidden" name="total_price_with_vat" id="total_price_with_vat_hidden">
+                    
+                    <!-- כפתור שליחה -->
+                    <div class="mt-8">
+                        <button type="submit" 
+                                class="submit-button w-full sm:w-auto text-lg font-semibold text-white bg-brand-orange rounded-lg px-10 py-4 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2">
+                            אני מאשר ורוצה להתחיל!
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // פונקציה לעיצוב מספרים כפורמט מטבע
+        function formatCurrency(num) {
+            return '₪' + num.toLocaleString('he-IL', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        // פונקציה לחישוב הסכום הכולל
+        function calculateTotal() {
+            let subtotal = 0;
+            const modules = document.querySelectorAll('#modulesContainer input[type="checkbox"]');
+            const selectedModulesList = [];
+            
+            modules.forEach(module => {
+                // הדגשת מודול שנבחר
+                const moduleItem = module.closest('.module-item');
+                if (module.checked) {
+                    subtotal += parseFloat(module.dataset.price);
+                    selectedModulesList.push(module.labels[0].innerText.trim());
+                    moduleItem.classList.add('checked');
+                } else {
+                    moduleItem.classList.remove('checked');
+                }
+            });
+
+            const vat = subtotal * 0.18;
+            const total = subtotal + vat;
+
+            // עדכון שדות התצוגה
+            document.getElementById('subtotal').innerText = formatCurrency(subtotal);
+            document.getElementById('vat').innerText = formatCurrency(vat);
+            document.getElementById('total').innerText = formatCurrency(total);
+            
+            // עדכון שדות נסתרים בטופס
+            document.getElementById('selected_modules_hidden').value = selectedModulesList.join(', ');
+            document.getElementById('total_price_before_vat_hidden').value = subtotal.toFixed(2);
+            document.getElementById('total_price_with_vat_hidden').value = total.toFixed(2);
+        }
+
+        // פונקציה להגדרת תאריכים
+        function setDates() {
+            const today = new Date();
+            const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            const formattedDate = today.toLocaleDateString('he-IL', options);
+            
+            // תאריך בראש ההצעה
+            const proposalDateEl = document.getElementById('proposalDate');
+            if (proposalDateEl) {
+                proposalDateEl.innerText = formattedDate;
+            }
+            
+            // תאריך בטופס האישור
+            const approvalDateEl = document.getElementById('approvalDate');
+            if (approvalDateEl) {
+                approvalDateEl.value = formattedDate;
+            }
+        }
+
+        // הפעלת הפונקציות בטעינת העמוד
+        document.addEventListener('DOMContentLoaded', function() {
+            setDates();
+            calculateTotal();
+            
+            // טיפול בטופס
+            const form = document.getElementById('approvalForm');
+            form.addEventListener('submit', function(e) {
+                // אין להשתמש ב-confirm() בסביבה זו
+                // פשוט מאפשרים לטופס להישלח
+                return true;
+            });
+        });
+    </script>
+</body>
+</html>
+
