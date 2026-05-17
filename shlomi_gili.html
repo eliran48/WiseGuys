@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הצעת מחיר אסטרטגית - מוסך שלומי וגילי | Wise Guys</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Heebo & Assistant -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        agencyDark: '#0f172a',    /* slate-900 */
+                        agencyBlue: '#1e3a8a',    /* blue-900 */
+                        agencyAccent: '#d97706',  /* amber-600 */
+                        agencyAccentLight: '#fef3c7', /* amber-100 */
+                        goldCustom: '#eab308',     /* yellow-500 */
+                        charcoal: '#1e293b'       /* slate-800 */
+                    },
+                    fontFamily: {
+                        sans: ['Heebo', 'Assistant', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Heebo', 'Assistant', sans-serif;
+            background-color: #f8fafc;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-card {
+                box-shadow: none !important;
+                border: 1px solid #e2e8f0 !important;
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+            body {
+                background-color: #ffffff !important;
+            }
+        }
+        .step-line::before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            bottom: 2rem;
+            right: 1.25rem;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+        @media (min-width: 768px) {
+            .step-line::before {
+                right: 50%;
+                width: 2px;
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-agencyAccent selection:text-white">
+
+    <!-- TOP HEADER / NAV (No-Print) -->
+    <header class="no-print bg-agencyDark text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-agencyAccent text-agencyDark font-black p-2 rounded-lg text-lg tracking-wider">WG</div>
+                <span class="font-bold text-lg tracking-wide hidden sm:inline">WISE GUYS <span class="text-goldCustom font-normal">| BRUTAL MARKETING</span></span>
+            </div>
+            <div class="flex items-center gap-2">
+                <button onclick="window.print()" class="bg-slate-700 hover:bg-slate-600 text-white font-medium py-1.5 px-4 rounded-lg transition duration-200 flex items-center gap-2 text-sm">
+                    <i class="fa-solid fa-print"></i> הדפסת הצעה / שמירה כ-PDF
+                </button>
+                <a href="#approve-section" class="bg-agencyAccent hover:bg-amber-500 text-agencyDark font-bold py-1.5 px-4 rounded-lg transition duration-200 text-sm">
+                    אישור וחתימה קליק אחד
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <div class="bg-gradient-to-br from-agencyDark via-slate-900 to-agencyBlue text-white relative py-12 px-4 shadow-xl">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-transparent to-transparent opacity-70 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <span class="inline-block bg-agencyAccent/20 border border-agencyAccent/40 text-goldCustom font-semibold text-sm px-4 py-1.5 rounded-full mb-4">
+                הצעת מחיר שיווקית אסטרטגית - 360°
+            </span>
+            <h1 class="text-3xl md:text-5xl font-black mb-4 leading-tight text-white">
+                מנוע צמיחה דיגיטלי למוסך שלומי וגילי
+            </h1>
+            <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                תוכנית עבודה מקיפה הכוללת הקמת נכס דיגיטלי פרימיום, קמפיין ממומן וקידום אורגני – לזרם עבודה רציף ומילוי הליפטים במוסך שלכם
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 pt-8 border-t border-slate-700/60 text-right md:text-center">
+                <div>
+                    <span class="text-slate-400 text-xs block mb-1">לקוח:</span>
+                    <strong class="text-white text-base md:text-lg">מוסך שלומי וגילי מכונאות</strong>
+                </div>
+                <div>
+                    <span class="text-slate-400 text-xs block mb-1">סוכנות דיגיטל:</span>
+                    <strong class="text-white text-base md:text-lg">Wise Guys</strong>
+                </div>
+                <div>
+                    <span class="text-slate-400 text-xs block mb-1">תוקף הצעה:</span>
+                    <strong class="text-goldCustom text-base md:text-lg">30 יום ממועד השליחה</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-5xl mx-auto px-4 py-10 space-y-12">
+
+        <!-- INTRODUCTION -->
+        <section class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 print-card">
+            <div class="flex items-start gap-4">
+                <div class="bg-amber-100 text-agencyAccent p-3 rounded-xl hidden sm:block">
+                    <i class="fa-solid fa-lightbulb text-2xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold mb-3 text-agencyDark">ההזדמנות העסקית שלכם בדיגיטל</h2>
+                    <p class="text-slate-600 leading-relaxed text-base md:text-lg">
+                        בשוק הרכב התחרותי של היום, ובמיוחד באזור חדרה המתפתח במהירות, לקוחות כבר לא מחפשים ממוסכים באקראי ברחוב. כשיש תקלה ברכב, צורך בטיפול תקופתי או הכנה לטסט – <strong>הלקוחות מחפשים פתרון מיידי ומקצועי בגוגל</strong>.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-base md:text-lg mt-3">
+                        חברת <strong>Wise Guys</strong> מציעה לכם מעטפת דיגיטלית מלאה (360 מעלות) המתוכננת להביא רכבים חדשים ישירות למוסך שלכם. אנו משלבים יצירת נוכחות דיגיטלית מרשימה ואיכותית, קמפיינים ממומנים להבאת לקוחות באופן מיידי, וקידום אורגני מסיבי השולט בתוצאות החיפוש המקומיות לאורך זמן.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROVEN SEO EXPERIENCE IN GARAGES / AUTOMOTIVE -->
+        <section class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 print-card">
+            <div class="border-b pb-4 mb-6">
+                <span class="text-xs font-semibold text-agencyAccent uppercase tracking-wider block mb-1">המומחיות שלנו</span>
+                <h2 class="text-xl md:text-2xl font-bold text-agencyDark flex items-center gap-2">
+                    <i class="fa-solid fa-trophy text-goldCustom"></i> הכוח שלנו בענף הרכב: תוצאות מוכחות בשטח
+                </h2>
+                <p class="text-slate-500 text-sm mt-1">
+                    אנחנו לא מנחשים מה עובד בגוגל עבור מוסכים – אנחנו כבר עושים את זה, ומביאים את האתרים של הלקוחות שלנו למקומות הראשונים ברשת:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center mb-8">
+                <!-- Rank 1 -->
+                <div class="bg-slate-50 border border-slate-100 p-4 rounded-xl flex flex-col justify-center items-center">
+                    <span class="text-xs text-slate-500 block mb-1">תיקון טמבון פלסטיק</span>
+                    <strong class="text-emerald-600 text-lg md:text-xl font-black flex items-center gap-1">
+                        מקום 1 <i class="fa-solid fa-medal text-amber-500"></i>
+                    </strong>
+                    <span class="text-[10px] text-slate-400 mt-1">בתוצאות החיפוש</span>
+                </div>
+                <!-- Rank 2 -->
+                <div class="bg-slate-50 border border-slate-100 p-4 rounded-xl flex flex-col justify-center items-center">
+                    <span class="text-xs text-slate-500 block mb-1">מוסכי הסדר שלמה</span>
+                    <strong class="text-agencyBlue text-lg md:text-xl font-black">מקום 3</strong>
+                    <span class="text-[10px] text-slate-400 mt-1">בתוצאות החיפוש</span>
+                </div>
+                <!-- Rank 3 -->
+                <div class="bg-slate-50 border border-slate-100 p-4 rounded-xl flex flex-col justify-center items-center">
+                    <span class="text-xs text-slate-500 block mb-1">פחחות רכב</span>
+                    <strong class="text-slate-700 text-lg md:text-xl font-black">מקום 5</strong>
+                    <span class="text-[10px] text-slate-400 mt-1">בתוצאות החיפוש</span>
+                </div>
+                <!-- Rank 4 -->
+                <div class="bg-slate-50 border border-slate-100 p-4 rounded-xl flex flex-col justify-center items-center">
+                    <span class="text-xs text-slate-500 block mb-1">מוסך בתל אביב</span>
+                    <strong class="text-slate-700 text-lg md:text-xl font-black">מקום 5</strong>
+                    <span class="text-[10px] text-slate-400 mt-1">בתוצאות החיפוש</span>
+                </div>
+                <!-- Rank 5 -->
+                <div class="bg-slate-50 border border-slate-100 p-4 rounded-xl flex flex-col justify-center items-center col-span-2 md:col-span-1">
+                    <span class="text-xs text-slate-500 block mb-1">טיפול שנתי לרכב</span>
+                    <strong class="text-emerald-600 text-base md:text-lg font-black">עמוד ראשון 🚀</strong>
+                    <span class="text-[10px] text-slate-400 mt-1">בתוצאות החיפוש</span>
+                </div>
+            </div>
+
+            <!-- Case Study Brief (Yamit) -->
+            <div class="bg-gradient-to-r from-slate-50 to-slate-100/50 p-5 rounded-2xl border border-slate-200/60 flex flex-col sm:flex-row gap-4 items-start">
+                <div class="bg-agencyBlue text-white p-3 rounded-xl flex items-center justify-center">
+                    <i class="fa-solid fa-car-on text-2xl"></i>
+                </div>
+                <div class="space-y-1">
+                    <h4 class="font-bold text-slate-900 text-sm md:text-base">הניסיון המעשי שלנו: קידום דיגיטלי ל"מוסך ימית"</h4>
+                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed">
+                        הפעילות שלנו עבור <strong>מוסך ימית</strong> הוכיחה את עצמה כהצלחה עסקית אדירה. העבודה המקיפה כללה בניית תוכנית תוכן מקצועית, חיזוק ושדרוג עמודי השירות הראשיים של המוסך, אופטימיזציה קפדנית לכותרות ומטא דיסקריפשן (על מנת להגדיל אחוזי לחיצה בגוגל), ושיפור המבנה הפנימי של האתר להתאמה מוחלטת לביטויי חיפוש רלוונטיים ומניבי המרות בתחום הרכב. את הניסיון והכלים האלו אנו מביאים אליכם – למוסך שלומי וגילי בחדרה.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES DETAILED SECTION -->
+        <section class="space-y-6">
+            <h2 class="text-2xl font-black text-agencyDark text-center mb-8 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:right-1/2 after:translate-x-1/2 after:w-16 after:h-1 after:bg-agencyAccent">
+                פירוט השירותים בחבילה
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Service 1: Premium Website (5 Pages) -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col justify-between relative overflow-hidden transition duration-300 hover:shadow-md print-card">
+                    
+                    <!-- PERFECT NO-CLIP CORNER RIBBON (FIXED & HIGHLY VISIBLE) -->
+                    <div class="absolute top-0 left-0 w-28 h-28 overflow-hidden pointer-events-none z-20">
+                        <div class="absolute bg-emerald-500 text-white text-[11px] font-black py-1.5 w-36 text-center transform -rotate-45 shadow-md select-none tracking-wider" style="top: 18px; left: -36px;">
+                            במתנה!
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-5">
+                            <i class="fa-solid fa-laptop-code text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">1. בניית אתר פרימיום (5 עמודים) במתנה</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            נקים עבורכם אתר אינטרנט תדמיתי ומכירתי שלם הכולל 5 עמודים פנימיים כדי להציג את המוסך שלכם ברמה הגבוהה ביותר:
+                        </p>
+                        <div class="bg-slate-50 p-3 rounded-lg mb-4 text-xs text-agencyDark font-semibold space-y-1">
+                            <div class="flex items-center gap-1.5"><i class="fa-solid fa-folder text-agencyAccent"></i> עמוד 1: עמוד בית שיווקי וממיר</div>
+                            <div class="flex items-center gap-1.5"><i class="fa-solid fa-folder text-agencyAccent"></i> עמוד 2: אודות (מי אנחנו והניסיון)</div>
+                            <div class="flex items-center gap-1.5"><i class="fa-solid fa-folder text-agencyAccent"></i> עמוד 3: טיפולים ושירותי המכונאות</div>
+                            <div class="flex items-center gap-1.5"><i class="fa-solid fa-folder text-agencyAccent"></i> עמוד 4: סיפורי הצלחה וגלריית עבודות</div>
+                            <div class="flex items-center gap-1.5"><i class="fa-solid fa-folder text-agencyAccent"></i> עמוד 5: יצירת קשר מהירה וניווט Waze</div>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-600">
+                            <li><i class="fa-solid fa-check text-emerald-500 ml-2"></i> מותאם 100% למובייל עם לחצני חיוג ישיר</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 ml-2"></i> <strong>התקנת תוסף נגישות בסיסי באתר ללא עלות</strong></li>
+                            <li><i class="fa-solid fa-check text-emerald-500 ml-2"></i> עלויות דומיין ואחסון משולמות ישירות לספקים</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 ml-2"></i> תמיכה טכנית שוטפת באתר לאורך כל הריטיינר</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-50 flex justify-between items-center text-xs">
+                        <span class="text-slate-400">שווי ההטבה (חד-פעמי):</span>
+                        <strong class="text-emerald-600 font-bold">4,500 ₪ חינם!</strong>
+                    </div>
+                </div>
+
+                <!-- Service 2: Google Ads -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col justify-between relative overflow-hidden transition duration-300 hover:shadow-md print-card">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-5">
+                            <i class="fa-solid fa-ranking-star text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">2. קמפיין ממומן בגוגל (Google Ads)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            הבאת לקוחות חמים כאן ועכשיו. נפנה בדיוק לבעלי רכבים בחדרה והסביבה שמחפשים פתרון לתקלה או טיפול ברגע זה ממש.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-600">
+                            <li><i class="fa-solid fa-check text-blue-500 ml-2"></i> <strong>מחקר מילים מקיף וניתוח מלא של החשבון</strong></li>
+                            <li><i class="fa-solid fa-check text-blue-500 ml-2"></i> <strong>בדיקת וסידור חיווי המרות</strong> (Conversion Tracking)</li>
+                            <li><i class="fa-solid fa-check text-blue-500 ml-2"></i> אופטימיזציה שוטפת: מילות מפתח שליליות וייעול בידים</li>
+                            <li><i class="fa-solid fa-check text-blue-500 ml-2"></i> דוח חודשי מסכם: הוצאה, קליקים והמרות</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-50 flex justify-between items-center text-xs">
+                        <span class="text-slate-400">אופי השירות:</span>
+                        <strong class="text-blue-600 font-bold">שיחות טלפון מיידיות</strong>
+                    </div>
+                </div>
+
+                <!-- Service 3: SEO & Google Maps -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col justify-between relative overflow-hidden transition duration-300 hover:shadow-md print-card">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600 mb-5">
+                            <i class="fa-solid fa-location-dot text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">3. קידום אורגני וגוגל מפות (SEO)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            בניית סמכות האתר לדירוגים גבוהים בתוצאות החיפוש האורגניות, לצד שליטה מלאה ובולטות משמעותית בחיפושים מקומיים.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-600">
+                            <li><i class="fa-solid fa-check text-amber-500 ml-2"></i> <strong>ניהול, שדרוג ופיתוח פרופיל גוגל מפות</strong> (Google My Business) להזרמת פניות ישירות מהסביבה</li>
+                            <li><i class="fa-solid fa-check text-amber-500 ml-2"></i> <strong>יצירת 2 מאמרים מקצועיים בחודש</strong> (400 מילים)</li>
+                            <li><i class="fa-solid fa-check text-amber-500 ml-2"></i> <strong>בניית קישור חיצוני חזק מדי חודש</strong> לשיפור הסמכות</li>
+                            <li><i class="fa-solid fa-check text-amber-500 ml-2"></i> אופטימיזציית תוכן ומעקב אחר 10 מילות מפתח</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-50 flex justify-between items-center text-xs">
+                        <span class="text-slate-400">אופי השירות:</span>
+                        <strong class="text-amber-600 font-bold">נכס קבוע לטווח ארוך</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE ROI CALCULATOR -->
+        <section class="no-print bg-gradient-to-r from-slate-900 to-agencyBlue text-white rounded-2xl p-6 md:p-8 shadow-lg">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-6">
+                    <span class="bg-amber-500/20 text-goldCustom text-xs font-semibold px-3 py-1 rounded-full uppercase">מחשבון עסקי</span>
+                    <h3 class="text-xl md:text-2xl font-bold mt-2">מחשבון החזר השקעה (ROI) משוער למוסך</h3>
+                    <p class="text-slate-300 text-sm mt-1">שחקו עם הערכים כדי לראות את כדאיות הפעילות השיווקית מול הריטיינר</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-6">
+                    <!-- Inputs -->
+                    <div class="space-y-5">
+                        <div>
+                            <label class="flex justify-between text-sm text-slate-300 mb-2">
+                                <span>כמות רכבים חדשים שיכנסו בחודש:</span>
+                                <span class="text-goldCustom font-bold" id="cars-value">15 רכבים</span>
+                            </label>
+                            <input type="range" id="cars-slider" min="5" max="50" value="15" class="w-full accent-amber-500 cursor-pointer">
+                        </div>
+                        <div>
+                            <label class="flex justify-between text-sm text-slate-300 mb-2">
+                                <span>רווח ממוצע לתיקון/טיפול מכונאות:</span>
+                                <span class="text-goldCustom font-bold" id="profit-value">1,200 ₪</span>
+                            </label>
+                            <input type="range" id="profit-slider" min="400" max="4000" step="100" value="1200" class="w-full accent-amber-500 cursor-pointer">
+                        </div>
+                    </div>
+                    
+                    <!-- Outputs -->
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-5 text-center">
+                        <span class="text-slate-300 text-xs block mb-1">תוספת הכנסה חודשית משוערת:</span>
+                        <span class="text-3xl md:text-4xl font-black text-goldCustom block mb-4" id="roi-revenue">18,000 ₪</span>
+                        
+                        <div class="flex justify-between items-center text-xs text-slate-300 pt-3 border-t border-white/10">
+                            <span>עלות הריטיינר החודשי:</span>
+                            <span class="font-semibold text-white">4,500 ₪</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs text-slate-300 mt-2">
+                            <span>יחס החזר השקעה משוער:</span>
+                            <span class="font-semibold text-emerald-400 text-sm" id="roi-ratio">פי 4.0 על השירות!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKPLAN / TIMELINE -->
+        <section class="space-y-6">
+            <h2 class="text-2xl font-black text-agencyDark text-center mb-8">תהליך העבודה בשטח</h2>
+            
+            <div class="relative step-line">
+                <!-- Step 1 -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-8 md:mb-12">
+                    <div class="w-full md:w-[45%] md:text-left mb-4 md:mb-0"></div>
+                    <div class="absolute right-0 md:right-auto md:left-1/2 md:-translate-x-1/2 w-10 h-10 rounded-full bg-agencyAccent text-white flex items-center justify-center font-bold z-10 shadow-md">
+                        1
+                    </div>
+                    <div class="w-full md:w-[45%] bg-white rounded-xl p-5 shadow-sm border border-slate-100 pr-14 md:pr-6 print-card">
+                        <h4 class="font-bold text-agencyDark text-base">קבלת גישות ואפיון אסטרטגי</h4>
+                        <p class="text-slate-600 text-sm mt-2">
+                            קבלת גישה מלאה לנכסים קיימים במידה ויש (אנליטיקס, חשבון פרסום). אנו מבצעים מחקר מילות מפתח מלא ובונים את תוכנית העבודה לקידום האורגני והממומן.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-8 md:mb-12">
+                    <div class="w-full md:w-[45%] order-2 md:order-1 bg-white rounded-xl p-5 shadow-sm border border-slate-100 pr-14 md:pr-6 md:text-left print-card">
+                        <h4 class="font-bold text-agencyDark text-base">בניית האתר והעלאה לשרת האחסון</h4>
+                        <p class="text-slate-600 text-sm mt-2">
+                            בנייה ועיצוב של האתר החדש בן 5 העמודים (כולל גלריה, טיפולים ואודות), כתיבת קופי ממוקד מכירות, העלאת האתר לשרת האחסון המהיר והטמעת קודי מעקב מדויקים.
+                        </p>
+                    </div>
+                    <div class="absolute right-0 md:right-auto md:left-1/2 md:-translate-x-1/2 w-10 h-10 rounded-full bg-agencyBlue text-white flex items-center justify-center font-bold z-10 shadow-md">
+                        2
+                    </div>
+                    <div class="w-full md:w-[45%] order-1 md:order-2 mb-4 md:mb-0"></div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-8 md:mb-12">
+                    <div class="w-full md:w-[45%] md:text-left mb-4 md:mb-0"></div>
+                    <div class="absolute right-0 md:right-auto md:left-1/2 md:-translate-x-1/2 w-10 h-10 rounded-full bg-agencyAccent text-white flex items-center justify-center font-bold z-10 shadow-md">
+                        3
+                    </div>
+                    <div class="w-full md:w-[45%] bg-white rounded-xl p-5 shadow-sm border border-slate-100 pr-14 md:pr-6 print-card">
+                        <h4 class="font-bold text-agencyDark text-base">השקת קמפיין ממומן, SEO ושדרוג מפות</h4>
+                        <p class="text-slate-600 text-sm mt-2">
+                            הקמת הקמפיינים החדשים בגוגל ובדיקת חיווי המרות. במקביל, שדרוג ועיצוב כרטיס הגוגל מפות (Google Maps) ותחילת העלאת מאמרים וקישורים לאתר.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative flex flex-col md:flex-row items-center md:justify-between">
+                    <div class="w-full md:w-[45%] order-2 md:order-1 bg-white rounded-xl p-5 shadow-sm border border-slate-100 pr-14 md:pr-6 md:text-left print-card">
+                        <h4 class="font-bold text-agencyDark text-base">אופטימיזציה שוטפת ודוחות חודשיים</h4>
+                        <p class="text-slate-600 text-sm mt-2">
+                            ניטור יומיומי של תקציבי המדיה, החרגת מילים לא רלוונטיות, עדכון תוכן באתר, ניהול ביקורות במפות והפקת דוחות חודשיים מפורטים על שיחות, קליקים ומיקומים.
+                        </p>
+                    </div>
+                    <div class="absolute right-0 md:right-auto md:left-1/2 md:-translate-x-1/2 w-10 h-10 rounded-full bg-agencyBlue text-white flex items-center justify-center font-bold z-10 shadow-md">
+                        4
+                    </div>
+                    <div class="w-full md:w-[45%] order-1 md:order-2 mb-4 md:mb-0"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVESTMENT, PAYMENT & TERMS -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden print-card">
+            <!-- Header of card -->
+            <div class="bg-agencyDark text-white p-6 flex justify-between items-center flex-wrap gap-4">
+                <div>
+                    <h3 class="text-xl font-bold">ההשקעה הכספית שלכם</h3>
+                    <p class="text-slate-400 text-sm">חבילת פרימיום כוללת למוסך שלומי וגילי</p>
+                </div>
+                <div class="bg-agencyAccent/20 border border-agencyAccent/30 px-4 py-2 rounded-xl text-center">
+                    <span class="text-slate-300 text-xs block">מחיר חבילה חודשית פיקס:</span>
+                    <strong class="text-goldCustom text-xl">4,500 ₪ <span class="text-xs text-slate-300 font-normal">+ מע"מ / חודש</span></strong>
+                </div>
+            </div>
+
+            <!-- Details of card -->
+            <div class="p-6 md:p-8 space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-slate-900 border-b pb-2">תנאי תשלום ופרטי חשבון:</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            התשלום יבוצע בכל חודש מראש, לפני תחילת יום העבודה עבור החודש העוקב. 
+                        </p>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-sm text-slate-700 space-y-1 font-sans font-semibold">
+                            <strong class="text-agencyDark block mb-1">פרטים להעברה בנקאית:</strong>
+                            <div><strong>עבור:</strong> אור אלירן / Wise Guys</div>
+                            <div><strong>בנק:</strong> דיסקונט (בנק מספר 11)</div>
+                            <div><strong>סניף:</strong> מרום נווה (סניף מספר 96)</div>
+                            <div><strong>מספר חשבון:</strong> 74215630</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-slate-900 border-b pb-2">דגשים מסחריים:</h4>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-info text-agencyAccent mt-1"></i>
+                                <span><strong>תקציב הפרסום בגוגל:</strong> משולם ישירות לגוגל מכרטיס האשראי של המוסך ואינו כלול בעלות הריטיינר (מומלץ: 2,500 ₪ - 3,500 ₪ בחודש).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-info text-agencyAccent mt-1"></i>
+                                <span><strong>עלויות דומיין ואחסון:</strong> עלויות אלו הן נפרדות מעלות הריטיינר וישולמו ישירות על ידי הלקוח לספקי שירות צד ג' חיצוניים.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-info text-agencyAccent mt-1"></i>
+                                <span><strong>תקופת התקשרות:</strong> התחייבות ראשונית של 6 חודשים (בשל ספיגת עלות הקמת האתר והקידום האורגני), ולאחר מכן הפסקת פעילות בהתראה של 7 ימי עסקים בלבד לפני החודש הבא.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TERMS & DISCLAIMERS SECTION (Directly from PDF with modifications) -->
+        <section class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 print-card">
+            <h3 class="text-lg font-bold text-agencyDark border-b pb-3 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-gavel text-agencyAccent"></i> תנאים משפטיים והגדרת אחריות (SLA)
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-xs text-slate-500 leading-relaxed">
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">1.</span>
+                    <span>כל עיכוב מצד הלקוח בחומרים הפרסומיים או במתן סיסמאות עשוי לגרום לעיכוב בקמפיינים הצפויים להתפרסם ועלול לפגוע ברציפות ובאפקטיביות של הליך הפרסום.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">2.</span>
+                    <span>אין אנו אחראים לזכויות יוצרים על חומרים, תמונות או טקסטים הנשלחים אלינו על ידי הלקוח לצורך העלאה לאתר או לקמפיינים.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">3.</span>
+                    <span>אין אנו אחראים על טיב, איכות או בטיחות המוצרים והשירותים המוצעים על ידי מוסך הלקוח.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">4.</span>
+                    <span><strong>תוסף נגישות:</strong> כחלק מהשירות אנו מוסיפים לאתר תוסף נגישות בסיסי ללא עלות נוספת. מובהר כי התקנת התוסף אינה מהווה תחליף לייעוץ משפטי מלא ואין אנו נושאים באחריות משפטית לגבי נגישות האתר.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">5.</span>
+                    <span>שירותי דיגיטל עלולים להיות מושפעים לעיתים מעומסי תעבורה, שינויים טכנולוגיים או איטיות של מערכות הפרסום של גוגל/שרתים. אין אנו אחראים על עיכובים הנוצרים מכך.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">6.</span>
+                    <span>התשלום החודשי אינו כולל את תקציבי הפרסום (המדיה) שישולמו ישירות למנוע החיפוש גוגל דרך כרטיס האשראי של הלקוח.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">7.</span>
+                    <span>מכיוון שהשוק דינמי, אין אנו יכולים להתחייב על כמות המרות, שיחות או לידים מדויקת כתוצאה מהקמפיין הפרסומי.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">8.</span>
+                    <span>אין אנו יכולים להתחייב על מיקומים אורגניים מדויקים או ספציפיים בגוגל, שכן הדירוג נקבע על ידי אלגוריתם גוגל המשתנה תדיר.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">9.</span>
+                    <span>התשלום הינו תשלום חודשי שיועבר בתחילת כל חודש עבודה החל ממועד התחלת הפעילות.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">10.</span>
+                    <span>בתום תקופת ההתחייבות הראשונית (6 חודשים), ניתן להפסיק את העבודה בכל חודש בהתראה של 7 ימי עסקים מראש לפני מועד החיוב הבא.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">11.</span>
+                    <span>הצעה זו תקפה למשך 30 ימים מיום הפקתה ומיועדת למוסך שלומי וגילי בלבד.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <span class="font-bold text-agencyAccent">12.</span>
+                    <span>הסכומים המצוינים בהצעה אינם כוללים מע"מ כחוק. אין אנו מחויבים להמשיך לעבוד או לספק שירותים ככל ולא הועבר התשלום החודשי במועדו.</span>
+                </div>
+                <div class="flex items-start gap-2 col-span-1 md:col-span-2">
+                    <span class="font-bold text-agencyAccent">13.</span>
+                    <span><strong>עלויות דומיין ואחסון:</strong> עלויות רכישת והחזקת הדומיין (שם המתחם של האתר) והאחסון השנתי הן נפרדות לחלוטין מעלויות הריטיינר וההקמה, וישולמו על ידי הלקוח באופן עצמאי ישירות לספקים החיצוניים (כמו רשמי דומיינים וחברות אחסון).</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- APPROVAL & DIGITAL SIGNATURE -->
+        <section id="approve-section" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 print-card">
+            <h3 class="text-xl md:text-2xl font-black text-agencyDark text-center mb-4">אישור ההצעה ותחילת עבודה</h3>
+            <p class="text-center text-slate-500 text-sm max-w-lg mx-auto mb-8">
+                מאשרים את ההצעה ויוצאים לדרך? מלאו את פרטי המוסך, חתמו על המסך וצוות Wise Guys יתחיל בהקמת הנכסים הדיגיטליים שלכם!
+            </p>
+
+            <form id="approvalForm" onsubmit="handleSignatureSubmit(event)" class="max-w-2xl mx-auto space-y-6">
+                <!-- Formspree Special Hidden Fields -->
+                <input type="hidden" name="_subject" value="✓ אישור חתימה על הצעת מחיר - מוסך שלומי וגילי">
+                <input type="hidden" id="signatureData" name="תמונת חתימה">
+                <input type="hidden" id="roiCalculatedRevenue" name="הכנסה משוערת שחושבה במחשבון" value="18,000 ₪">
+                <input type="hidden" id="roiCalculatedCars" name="כמות רכבים שחושבה" value="15">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">שם מלא של המאשר/ת:</label>
+                        <input type="text" id="signerName" name="שם המאשר/ת" required placeholder="למשל: שלומי / גילי" class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-agencyAccent focus:border-agencyAccent outline-none transition duration-150">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">מספר טלפון לתיאום:</label>
+                        <input type="tel" id="signerPhone" name="טלפון ליצירת קשר" required placeholder="למשל: 050-1234567" class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-agencyAccent focus:border-agencyAccent outline-none transition duration-150">
+                    </div>
+                </div>
+
+                <!-- Digital Signature Canvas -->
+                <div class="no-print">
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">חתימה דיגיטלית (על גבי המסך):</label>
+                    <div class="border border-slate-200 rounded-lg overflow-hidden bg-slate-50">
+                        <canvas id="signature-pad" class="w-full h-40 bg-white cursor-crosshair"></canvas>
+                        <div class="bg-slate-100 px-4 py-2 flex justify-between items-center text-xs text-slate-500 border-t border-slate-200">
+                            <span>חתמו בעזרת האצבע בנייד או העכבר במחשב</span>
+                            <button type="button" onclick="clearSignature()" class="text-rose-600 hover:text-rose-700 font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-trash-can"></i> נקה חתימה
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fallback print-ready signature lines for PDF printing -->
+                <div class="hidden print:block pt-8">
+                    <div class="flex justify-between items-center mt-6">
+                        <div class="w-1/2 border-t border-dashed border-slate-400 pt-2 text-center text-xs text-slate-600">
+                            חתימת מוסך שלומי וגילי
+                        </div>
+                        <div class="w-1/3"></div>
+                        <div class="w-1/2 border-t border-dashed border-slate-400 pt-2 text-center text-xs text-slate-600">
+                            חתימת Wise Guys
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error Message UI Block -->
+                <div id="formErrorMessage" class="hidden p-4 bg-rose-50 border border-rose-200 text-rose-700 rounded-xl text-sm text-center font-semibold"></div>
+
+                <div class="no-print text-center pt-4">
+                    <button type="submit" id="submitBtn" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition duration-200 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-file-signature ml-2"></i> אני מאשר את ההצעה וחותם!
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-agencyDark text-slate-400 py-12 px-4 text-center border-t border-slate-800">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <div class="flex justify-center items-center gap-3 mb-2">
+                <span class="font-extrabold text-white text-xl">WISE GUYS</span>
+                <span class="text-slate-600">|</span>
+                <span class="font-bold text-goldCustom text-sm">BRUTAL MARKETING</span>
+            </div>
+            <p class="text-sm max-w-md mx-auto">
+                אוטומציה, קידום דיגיטלי ופתרונות צמיחה מתקדמים לעסקים שמחפשים תוצאות בשורה התחתונה.
+            </p>
+            <div class="flex justify-center gap-6 pt-4 text-xs text-slate-500">
+                <span>eliranor.com</span>
+                <span>•</span>
+                <span>wiseguys.co.il</span>
+            </div>
+            <p class="text-xs text-slate-600 pt-6">
+                © 2026 כל הזכויות שמורות ל-Wise Guys.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SUCCESS MODAL -->
+    <div id="successModal" class="fixed inset-0 bg-slate-900/80 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl transform scale-95 transition-all duration-300">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900 mb-2">תודה, שלומי וגילי!</h3>
+            <p class="text-slate-600 text-sm mb-6">
+                ההצעה נחתמה, נשלחה ואושרה בהצלחה! העתק מהחתימה והפרטים התקבל כעת בתיבת המייל של Wise Guys להתחלת העבודה.
+            </p>
+            <div class="bg-slate-50 p-3 rounded-lg text-xs text-slate-500 text-right mb-6 space-y-1">
+                <div><strong>שם המאשר:</strong> <span id="modal-name"></span></div>
+                <div><strong>טלפון:</strong> <span id="modal-phone"></span></div>
+                <div><strong>תאריך חתימה:</strong> <span id="modal-date"></span></div>
+            </div>
+            <button onclick="closeModal()" class="w-full bg-agencyDark hover:bg-slate-800 text-white font-bold py-2.5 px-4 rounded-xl transition duration-150">
+                סגור חלון
+            </button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // ROI Calculator Logic
+        const carsSlider = document.getElementById('cars-slider');
+        const profitSlider = document.getElementById('profit-slider');
+        const carsValue = document.getElementById('cars-value');
+        const profitValue = document.getElementById('profit-value');
+        const roiRevenue = document.getElementById('roi-revenue');
+        const roiRatio = document.getElementById('roi-ratio');
+
+        const roiCalculatedRevenue = document.getElementById('roiCalculatedRevenue');
+        const roiCalculatedCars = document.getElementById('roiCalculatedCars');
+
+        function updateROI() {
+            const cars = parseInt(carsSlider.value);
+            const profit = parseInt(profitSlider.value);
+            
+            carsValue.textContent = `${cars} רכבים`;
+            profitValue.textContent = `${profit.toLocaleString()} ₪`;
+            
+            const revenue = cars * profit;
+            roiRevenue.textContent = `${revenue.toLocaleString()} ₪`;
+            
+            // Sync with hidden form fields
+            if (roiCalculatedRevenue) roiCalculatedRevenue.value = `${revenue.toLocaleString()} ₪`;
+            if (roiCalculatedCars) roiCalculatedCars.value = cars;
+            
+            const ratio = (revenue / 4500).toFixed(1);
+            roiRatio.textContent = `פי ${ratio} על ההשקעה בריטיינר!`;
+            if (ratio >= 5) {
+                roiRatio.className = "font-semibold text-emerald-400 text-sm animate-pulse";
+            } else {
+                roiRatio.className = "font-semibold text-emerald-400 text-sm";
+            }
+        }
+
+        carsSlider.addEventListener('input', updateROI);
+        profitSlider.addEventListener('input', updateROI);
+
+        // Canvas Signature Pad Logic
+        const canvas = document.getElementById('signature-pad');
+        const ctx = canvas.getContext('2d');
+        let isDrawing = false;
+        let hasSigned = false; // flag to trace if user actually painted
+
+        // Adjust canvas resolution
+        function resizeCanvas() {
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+            ctx.strokeStyle = '#0f172a'; // agencyDark color
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+        }
+
+        window.addEventListener('load', () => {
+            resizeCanvas();
+            updateROI();
+        });
+        window.addEventListener('resize', resizeCanvas);
+
+        // Helper to trace signature state
+        function startDrawing(e) {
+            isDrawing = true;
+            hasSigned = true;
+            ctx.beginPath();
+            if (e.touches) {
+                const touch = e.touches[0];
+                const rect = canvas.getBoundingClientRect();
+                ctx.moveTo(touch.clientX - rect.left, touch.clientY - rect.top);
+            } else {
+                ctx.moveTo(e.offsetX, e.offsetY);
+            }
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            if (e.touches) {
+                const touch = e.touches[0];
+                const rect = canvas.getBoundingClientRect();
+                ctx.lineTo(touch.clientX - rect.left, touch.clientY - rect.top);
+            } else {
+                ctx.lineTo(e.offsetX, e.offsetY);
+            }
+            ctx.stroke();
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+        }
+
+        // Drawing events for Mouse
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseleave', stopDrawing);
+
+        // Touch events for Mobile
+        canvas.addEventListener('touchstart', (e) => {
+            startDrawing(e);
+            e.preventDefault();
+        });
+        canvas.addEventListener('touchmove', (e) => {
+            draw(e);
+            e.preventDefault();
+        });
+        canvas.addEventListener('touchend', stopDrawing);
+
+        function clearSignature() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            hasSigned = false;
+        }
+
+        // Form submission via AJAX to Formspree
+        function handleSignatureSubmit(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const errorBlock = document.getElementById('formErrorMessage');
+            
+            // Reset state
+            errorBlock.classList.add('hidden');
+            errorBlock.textContent = '';
+
+            // Check signature
+            if (!hasSigned) {
+                errorBlock.classList.remove('hidden');
+                errorBlock.textContent = 'אנא חתמו על גבי מסך החתימה כדי לאשר את ההצעה.';
+                return;
+            }
+
+            const name = document.getElementById('signerName').value;
+            const phone = document.getElementById('signerPhone').value;
+            const signaturePad = document.getElementById('signature-pad');
+            const signatureDataField = document.getElementById('signatureData');
+            
+            // Set base64 image data into hidden input for Formspree
+            signatureDataField.value = signaturePad.toDataURL();
+
+            // Set sending UI state
+            const originalBtnHTML = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin ml-2"></i> שולח חתימה ומאשר...';
+
+            // Prepare Formspree Submission
+            const form = document.getElementById('approvalForm');
+            const formData = new FormData(form);
+
+            fetch('https://formspree.io/f/mgoqwryy', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                
+                if (response.ok) {
+                    const dateStr = new Date().toLocaleDateString('he-IL', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
+
+                    // Populate Modal Data
+                    document.getElementById('modal-name').textContent = name;
+                    document.getElementById('modal-phone').textContent = phone;
+                    document.getElementById('modal-date').textContent = dateStr;
+
+                    // Show Success Modal
+                    const modal = document.getElementById('successModal');
+                    modal.classList.remove('hidden');
+                    modal.querySelector('div').classList.remove('scale-95');
+                    modal.querySelector('div').classList.add('scale-100');
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwnProperty.call(data, 'errors')) {
+                            errorBlock.textContent = data.errors.map(error => error.message).join(", ");
+                        } else {
+                            errorBlock.textContent = 'אירעה שגיאה בעיבוד הטופס על ידי השרת. אנא פנו לאלירן ישירות.';
+                        }
+                        errorBlock.classList.remove('hidden');
+                    });
+                }
+            })
+            .catch(error => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                errorBlock.textContent = 'שגיאת תקשורת: לא ניתן לשלוח את החתימה. בדקו את החיבור שלכם לאינטרנט ונסו שוב.';
+                errorBlock.classList.remove('hidden');
+            });
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
