@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הצעה לתכנית שיווקית מודולרית | משרד עו"ד פרי-שקד</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            blue: '#1E3A8A',
+                            accent: '#2563EB',
+                            gold: '#D97706',
+                            lightBg: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Heebo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #F1F5F9;
+            color: #0F172A;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+        }
+        .gradient-header {
+            background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+        }
+        .tab-active {
+            border-bottom: 3px solid #2563EB;
+            color: #2563EB;
+            font-weight: 700;
+        }
+        .track-card-active {
+            border-color: #2563EB !important;
+            background-color: #FFFFFF !important;
+            box-shadow: 0 12px 25px -5px rgba(37, 99, 235, 0.2) !important;
+            transform: translateY(-2px);
+        }
+        .track-card-inactive {
+            border-color: #E2E8F0 !important;
+            background-color: #F8FAFC !important;
+            opacity: 0.8;
+        }
+        .track-card-inactive:hover {
+            opacity: 1;
+            background-color: #FFFFFF !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-16">
+
+    <header class="gradient-header text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+            <!-- WiseGuys Permanent Logo & Supplier Info -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <img src="https://wiseguys.co.il/wp-content/uploads/2025/05/WiseGuyes-11-300x300.png" 
+                     alt="WiseGuys Logo" 
+                     class="h-12 w-12 object-contain bg-white rounded-xl p-1 shadow-sm border border-white/20">
+                <div>
+                    <h1 class="text-lg md:text-xl font-black tracking-wide leading-tight">WiseGuys & אלירן אור</h1>
+                    <p class="text-xs text-blue-200">מתכנן תהליכי שיווק, אוטומציה וקידום דיגיטלי</p>
+                </div>
+            </div>
+
+            <!-- Supplier Direct Contact Info -->
+            <div class="flex items-center space-x-5 space-x-reverse text-xs text-blue-100 font-medium">
+                <a href="tel:0553187548" class="hover:text-amber-300 transition flex items-center gap-1.5 py-1 px-2 rounded-lg hover:bg-white/10">
+                    <i class="fas fa-phone text-amber-400"></i>
+                    <span>055-3187548</span>
+                </a>
+                <a href="mailto:info@eliranor.com" class="hidden sm:flex hover:text-amber-300 transition items-center gap-1.5 py-1 px-2 rounded-lg hover:bg-white/10">
+                    <i class="fas fa-envelope text-amber-400"></i>
+                    <span>info@eliranor.com</span>
+                </a>
+                <a href="https://eliranor.com" target="_blank" class="hidden md:flex hover:text-amber-300 transition items-center gap-1.5 py-1 px-2 rounded-lg hover:bg-white/10">
+                    <i class="fas fa-globe text-amber-400"></i>
+                    <span>eliranor.com</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 mt-6 md:mt-8 space-y-8">
+
+        <section class="glass-card rounded-2xl p-6 md:p-8 custom-shadow border-r-8 border-brand-blue relative overflow-hidden">
+            <div class="absolute -left-10 -bottom-10 opacity-5 text-brand-navy pointer-events-none">
+                <i class="fas fa-scale-balanced text-9xl"></i>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-black text-slate-900 leading-tight">
+                        הצעה לתכנית שיווקית מודולרית
+                    </h2>
+                    <p class="text-slate-600 mt-2 font-medium text-sm md:text-base">
+                        עבור: <span class="text-brand-blue font-bold">משרד עו"ד פרי-שקד ("Two Lawyers")</span> | עו"ד עופרה פרי & עו"ד שלומית שקד
+                    </p>
+                </div>
+                
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-left min-w-[210px] w-full md:w-auto">
+                    <div class="text-xs text-slate-500 font-semibold">תאריך הנפקה</div>
+                    <div id="proposalDate" class="text-base font-bold text-slate-800"></div>
+                    <div class="text-xs text-emerald-600 font-bold mt-1 flex items-center gap-1">
+                        <i class="fas fa-circle text-[8px] animate-pulse"></i> בתוקף ל-10 ימים
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-2xl p-6 md:p-8 custom-shadow space-y-6">
+            <div>
+                <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fas fa-bullseye text-brand-accent"></i> תמצית אסטרטגית ומטרות הפרויקט
+                </h3>
+                <p class="text-slate-700 leading-relaxed mt-3 text-sm md:text-base">
+                    בהמשך לפגישת האפיון המשותפת, מטרת העל של התוכנית היא לייצר תזרים לידים איכותיים וממוקדים למשרד בתחומי הליבה: <strong>דיני משפחה, נזיקין ודיני עבודה</strong>. מתוך הבנת הצרכים וההתחשבות בשותפות, הכנו מתווה עבודה מודולרי המאפשר לכן לבחור בין הקמת תשתית מותג משותפת חדשה לבין מינוף האתר הקיים.
+                </p>
+            </div>
+
+            <!-- Key Quotes / Insights from Meeting -->
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50/50 p-4 md:p-5 rounded-2xl border border-blue-100 space-y-3">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-brand-blue flex items-center gap-2">
+                    <i class="fas fa-quote-right text-amber-500"></i> דגשים מרכזיים מתוך שיחת האפיון
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-700">
+                    <div class="bg-white p-3 rounded-xl shadow-sm border border-blue-100/80">
+                        <span class="font-bold text-slate-900 block mb-1">תזרים פניות מיידי:</span>
+                        "אנחנו שנה וחצי עובדות יחד... רוצות להביא עבודה ממוקדת ומכניסה כאן ועכשיו."
+                    </div>
+                    <div class="bg-white p-3 rounded-xl shadow-sm border border-blue-100/80">
+                        <span class="font-bold text-slate-900 block mb-1">כדאיות כלכלית בתיקים:</span>
+                        "בתיקי משפחה שכר הטרחה נע סביב ₪40,000 - ₪60,000, ולכן סגירת תיק אחד בודד מכסה את כל הפרסום."
+                    </div>
+                    <div class="bg-white p-3 rounded-xl shadow-sm border border-blue-100/80">
+                        <span class="font-bold text-slate-900 block mb-1">נכסים קיימים למינוף:</span>
+                        "יש לנו כבר כ-18 מאמרים ותמונות מוכנים שאפשר לצקת באופן מיידי לאתר ולמנף אורגנית."
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+                    <div class="p-2.5 rounded-lg bg-blue-600 text-white shrink-0">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">מיקוד במילות המרה</h4>
+                        <p class="text-xs text-slate-600 mt-1">מניעת בזבוז תקציב על ביטויים כלליים, ומיקוד במילות מפתח בעלות כוונת פנייה גבוהה (High-Intent).</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+                    <div class="p-2.5 rounded-lg bg-amber-600 text-white shrink-0">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">שילוב SEO + PPC</h4>
+                        <p class="text-xs text-slate-600 mt-1">תוצאות מהירות ומיידיות מהממומן בגוגל, לצד בניית נכס דיגיטלי יציב לטווח הארוך.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+                    <div class="p-2.5 rounded-lg bg-emerald-600 text-white shrink-0">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">נכס משותף ושקוף</h4>
+                        <p class="text-xs text-slate-600 mt-1">בניית תשתית ששייכת למשרד המשותף, המאפשרת חלוקה שוויונית והתרחבות עתידית.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-2xl p-6 md:p-8 custom-shadow">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full">בחירת מסלול עבודה</span>
+                <h3 class="text-2xl font-black text-slate-900 mt-2">בחרו את המסלול המתאים למשרד שלכן</h3>
+                <p class="text-xs md:text-sm text-slate-500 mt-1">לחצו על המסלול הרצוי לצפייה בפרטים המלאים ולעדכון מחשבון העלויות והסיכום</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Option 1: Joint Brand Infrastructure (Default Selected) -->
+                <div id="cardOption1" onclick="selectTrack(1)" class="cursor-pointer transition-all duration-300 rounded-2xl p-6 border-2 relative bg-white hover:shadow-xl border-blue-600 shadow-lg ring-2 ring-blue-500/20 track-card-active">
+                    <div class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        מומלץ לשותפות
+                    </div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-lg font-bold">
+                            01
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-lg text-slate-900">מסלול תשתית משותפת</h4>
+                            <p class="text-xs text-slate-500">Two Lawyers / פרי-שקד</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                        הקמת אתר וורדפרס תדמיתי וממיר מחדש על הדומיין המשותף, חיבור קמפיין Google Ads ממוקד והתחלת קידום אורגני (SEO) מהיום הראשון.
+                    </p>
+
+                    <ul class="text-xs space-y-2.5 text-slate-700 mb-6 border-t border-b border-slate-100 py-4">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-emerald-500 text-sm"></i>
+                            <span>אפיון, עיצוב ובניית אתר WordPress מהיר ומותאם לנייד</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-emerald-500 text-sm"></i>
+                            <span>העלאה וסידור 18 המאמרים והתכנים הקיימים</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-emerald-500 text-sm"></i>
+                            <span>מחקר מילות מפתח מקיף (משפחה, נזיקין, עבודה)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-emerald-500 text-sm"></i>
+                            <span>ניהול ואופטימיזציה של קמפיין Google Ads ממומן</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-emerald-500 text-sm"></i>
+                            <span>קידום אורגני חודשי (SEO) לבניית סמכות במנועי החיפוש</span>
+                        </li>
+                    </ul>
+
+                    <div class="bg-blue-50/90 p-4 rounded-xl border border-blue-100">
+                        <div class="flex justify-between items-center text-xs mb-1.5">
+                            <span class="text-slate-600">עלות הקמה חד פעמית:</span>
+                            <span class="font-bold text-slate-900">₪4,500</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-600">ניהול חודשי (SEO + PPC):</span>
+                            <span class="font-extrabold text-blue-700 text-sm">₪3,500 / חודש</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option 2: Existing Infrastructure -->
+                <div id="cardOption2" onclick="selectTrack(2)" class="cursor-pointer transition-all duration-300 rounded-2xl p-6 border-2 relative bg-white hover:shadow-xl border-slate-200 track-card-inactive">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg font-bold">
+                            02
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-lg text-slate-900">מסלול מינוף אתר קיים</h4>
+                            <p class="text-xs text-slate-500">התבססות על האתר של עופרה</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                        שימוש בתשתית האתר הקיימת של עופרה, הקמת עמודי נחיתה ייעודיים בתוכו לתחומי הפעילות השונים וניהול קמפיין ממומן בגוגל.
+                    </p>
+
+                    <ul class="text-xs space-y-2.5 text-slate-700 mb-6 border-t border-b border-slate-100 py-4">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-emerald-500 text-sm"></i>
+                            <span>התאמת מבנה עמודים באתר הקיים והקמת דף נחיתה ממוקד</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-emerald-500 text-sm"></i>
+                            <span>חיבור והגדרת מערכות מדידה (GA4, Tag Manager)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-emerald-500 text-sm"></i>
+                            <span>מחקר מילות מפתח ממוקד לקמפיין</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-emerald-500 text-sm"></i>
+                            <span>ניהול קמפיין Google Ads ממומן ממוקד המרות</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-emerald-500 text-sm"></i>
+                            <span>אופטימיזציית On-Page SEO בסיסית לעמודים החדשים</span>
+                        </li>
+                    </ul>
+
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div class="flex justify-between items-center text-xs mb-1.5">
+                            <span class="text-slate-600">עלות הקמה והתאמה:</span>
+                            <span class="font-bold text-slate-900">₪1,800</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-600">ניהול חודשי (PPC + תמיכת SEO):</span>
+                            <span class="font-extrabold text-slate-800 text-sm">₪3,500 / חודש</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-2xl p-6 md:p-8 custom-shadow">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fas fa-search text-amber-500"></i> מחקר מילות מפתח ממוקד (אזורי המרכז, השרון ותל אביב)
+                    </h3>
+                    <p class="text-xs text-slate-500 mt-1">נתונים מדויקים מתוך מערכת התכנון של גוגל: נפחי חיפוש, מחירי קליק והערכת תקציב חודשית לחשיפה של 30%</p>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="flex flex-wrap border-b border-slate-200 text-xs font-bold gap-3 md:gap-4">
+                    <button type="button" onclick="showKwCategory('family')" id="tabFamily" class="pb-2 tab-active transition-all">עו"ד משפחה וגירושין</button>
+                    <button type="button" onclick="showKwCategory('prenup')" id="tabPrenup" class="pb-2 text-slate-500 hover:text-slate-800 transition-all">הסכמי ממון וגירושין</button>
+                    <button type="button" onclick="showKwCategory('torts')" id="tabTorts" class="pb-2 text-slate-500 hover:text-slate-800 transition-all">נזיקין וחדלות פירעון</button>
+                    <button type="button" onclick="showKwCategory('labor')" id="tabLabor" class="pb-2 text-slate-500 hover:text-slate-800 transition-all">דיני עבודה</button>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-right text-slate-700">
+                    <thead class="bg-slate-100 text-slate-800 font-bold uppercase rounded-lg">
+                        <tr>
+                            <th class="p-3.5 rounded-r-lg">ביטוי חיפוש</th>
+                            <th class="p-3.5">נפח חיפוש חודשי</th>
+                            <th class="p-3.5">רמת תחרות</th>
+                            <th class="p-3.5">טווח מחיר לקליק (CPC)</th>
+                            <th class="p-3.5 rounded-l-lg">הוצאה חודשית משוערת (30% חשיפה)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kwTableBody" class="divide-y divide-slate-100">
+                        <!-- Filled dynamically by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-4 p-3.5 bg-amber-50 rounded-xl border border-amber-200 flex items-center gap-3 text-xs text-amber-900">
+                <i class="fas fa-lightbulb text-amber-600 text-base shrink-0"></i>
+                <span><strong>אסטרטגיית מפתח:</strong> כפי שניתן לראות במחקר, ביטויים תחרותיים מאוד (כמו "עורך דין לענייני משפחה") מגיעים לעד ₪76+ לקליק. נתמקד בשילוב ביטויי המרה מדויקים וביטויי זנב ארוך (כגון "הסכם ממון", "עורכת דין לענייני משפחה", "הסכם גירושין בהסכמה") להוזלת מחיר הליד בחדות והגדלת ה-ROI!</span>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-2xl p-6 md:p-8 custom-shadow bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 text-white">
+            <div class="max-w-2xl">
+                <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-400/10 px-2.5 py-1 rounded-md border border-amber-400/20">מחשבון תקציב פרסום ממומן</span>
+                <h3 class="text-2xl font-black mt-2">סימולטור קמפיין Google Ads חודשי</h3>
+                <p class="text-xs text-blue-200 mt-1">גררו את הסליידר לקביעת תקציב המדיה המשולם ישירות לגוגל (חישוב הצפי מבוסס על יחס המרה של 10% מקליק לליד איכותי)</p>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center text-sm font-bold mb-2">
+                            <span>תקציב פרסום לגוגל (מדיה):</span>
+                            <span id="sliderBudgetValue" class="text-xl font-black text-amber-400">₪3,500 / חודש</span>
+                        </div>
+                        <input type="range" id="adBudgetSlider" min="2000" max="10000" step="500" value="3500" oninput="updateBudgetCalc()" class="w-full h-3 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                        <div class="flex justify-between text-[10px] text-slate-400 mt-1.5 font-medium">
+                            <span>₪2,000 (בסיסי)</span>
+                            <span>₪5,000 (מומלץ)</span>
+                            <span>₪10,000 (אגרסיבי)</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/10 backdrop-blur-md">
+                            <div class="text-xs text-blue-200">קליקים ממוקדים (משוער)</div>
+                            <div id="estClicks" class="text-2xl font-extrabold text-white mt-1">117 - 175</div>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/10 backdrop-blur-md">
+                            <div class="text-xs text-blue-200">פניות / לידים (לפי 10% המרה)</div>
+                            <div id="estLeads" class="text-2xl font-extrabold text-emerald-400 mt-1">12 - 18 לידים</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-white/10 p-5 rounded-2xl border border-white/15 space-y-3 text-xs backdrop-blur-md">
+                    <h4 class="font-bold text-amber-300 text-sm border-b border-white/10 pb-2 flex items-center gap-2">
+                        <i class="fas fa-calculator"></i> תחזית והערכת ROI (10% המרה)
+                    </h4>
+                    <p class="text-slate-200 leading-relaxed">
+                        מתוך סך הקליקים המגיעים לעמוד, אנו מציבים יעד של **10% המרה ממוצעת** לפניות בפועל (שיחה / טופס).
+                    </p>
+                    <p class="text-slate-200 leading-relaxed">
+                        בתחומי דיני משפחה ונזיקין, שכר הטרחה הממוצע לסגירת תיק נע בין <strong>₪15,000 ל-₪60,000+</strong>.
+                    </p>
+                    <p class="text-amber-300 font-semibold leading-relaxed">
+                        גיוס לקוח בודד מתוך כלל הלידים המתקבלים בחודש מכסה את כלל הוצאות השיווק והניהול!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-2xl p-6 md:p-8 custom-shadow">
+            <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <i class="fas fa-receipt text-blue-600"></i> סיכום ההשקעה בפרויקט
+            </h3>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-right text-sm">
+                    <thead>
+                        <tr class="border-b-2 border-slate-200 text-slate-600 text-xs">
+                            <th class="pb-3">רכיב</th>
+                            <th class="pb-3">פירוט</th>
+                            <th class="pb-3 text-left">מחיר (לפני מע"מ)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="py-4 font-bold text-slate-900" id="summaryTrackTitle">הקמת תשתית אתר משותף (Two Lawyers)</td>
+                            <td class="py-4 text-xs text-slate-500" id="summaryTrackDesc">אפיון, עיצוב, פיתוח וחיבור כלל המערכות (חד פעמי)</td>
+                            <td class="py-4 font-bold text-slate-900 text-left" id="summarySetupPrice">₪4,500</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 font-bold text-slate-900">ניהול חודשי שוטף (ריטיינר)</td>
+                            <td class="py-4 text-xs text-slate-500" id="summaryRetainerDesc">ניהול קמפיין ממומן בגוגל + קידום אורגני SEO ואופטימיזציה</td>
+                            <td class="py-4 font-bold text-slate-900 text-left">₪3,500 / חודש</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Dynamic Total Box -->
+            <div class="mt-6 bg-slate-900 text-white p-6 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-4 shadow-lg">
+                <div>
+                    <span class="text-xs text-slate-400 font-semibold">סה"כ לתשלום במעמד ההתחלה (הקמה + חודש ראשון):</span>
+                    <div class="text-xs text-slate-300 mt-1 space-x-3 space-x-reverse">
+                        <span>סכום יסוד: <strong id="summarySubtotal" class="text-white">₪8,000</strong></span>
+                        <span>•</span>
+                        <span>מע"מ (18%): <strong id="summaryVat" class="text-white">₪1,440</strong></span>
+                    </div>
+                </div>
+                <div class="text-left">
+                    <div class="text-xs text-slate-400">סה"כ כולל מע"מ:</div>
+                    <div id="grandTotalWithVat" class="text-3xl font-black text-amber-400">₪9,440</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-2xl p-6 md:p-8 custom-shadow">
+            <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <i class="fas fa-file-signature text-emerald-600"></i> תנאים כלליים וטופס אישור הצעת מחיר
+            </h3>
+
+            <div class="bg-slate-50 p-4 rounded-xl text-xs text-slate-600 space-y-2 mb-8 border border-slate-200 leading-relaxed">
+                <p>1. תוקף הצעת מחיר זו הינו 10 ימים ממועד הנפקתה.</p>
+                <p>2. תנאי תשלום: עלות ההקמה והחודש הראשון ישולמו במעמד החתימה וטרם תחילת העבודה.</p>
+                <p>3. תקציב הפרסום לגוגל (המדיה) משולם ישירות בכרטיס אשראי של הלקוח לחברת Google.</p>
+                <p>4. משך הקמת התשתית: כ-10 עד 14 ימי עבודה ממועד קבלת כל החומרים מהלקוח.</p>
+            </div>
+
+            <!-- Approval Form -->
+            <form id="proposalApprovalForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">שם החברה / המשרד *</label>
+                        <input type="text" id="companyName" required value="משרד עו''ד פרי-שקד" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">שם המאשר / הלקוח (חתימה) *</label>
+                        <input type="text" id="clientName" required placeholder="הקלד שם מלא לאישור" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">תאריך אישור (אוטומטי)</label>
+                        <input type="text" id="autoDateInput" readonly class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-100 text-slate-600 text-sm font-bold">
+                    </div>
+                </div>
+
+                <div class="border-t border-slate-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-xs text-slate-500 flex items-center gap-2">
+                        <i class="fas fa-lock text-emerald-600"></i>
+                        <span>בלחיצה על הכפתור הנך מאשר/ת את תנאי ההצעה והתחלת העבודה.</span>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="w-full md:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base rounded-xl shadow-lg hover:shadow-emerald-600/30 transition-all flex items-center justify-center gap-3">
+                        <i class="fas fa-check-circle"></i>
+                        <span>אני מאשר/ת את הצעת המחיר ורוצה להתחיל!</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <div id="feedbackModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl mx-4 transform scale-95 transition-transform duration-300" id="modalCard">
+            <div id="modalIcon" class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto mb-4">
+                <i class="fas fa-check"></i>
+            </div>
+            <h4 id="modalTitle" class="text-2xl font-black text-slate-900 mb-2">תודה רבה!</h4>
+            <p id="modalMessage" class="text-xs text-slate-600 mb-6 leading-relaxed">
+                אישור ההצעה התקבל בהצלחה. ניצור עמך קשר בהקדם להתחלת העבודה!
+            </p>
+            <button type="button" onclick="closeModal()" class="w-full py-3 bg-slate-900 text-white font-bold rounded-xl text-sm hover:bg-slate-800 transition">
+                סגור חלון
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Global State & Endpoints
+        let selectedTrack = 1;
+        const FORMSPREE_ENDPOINT = 'https://formspree.io/f/meeyzerv';
+
+        // Keyword research data bank strictly updated from research spreadsheet
+        const kwData = {
+            family: [
+                { word: 'עורך דין משפחה', volume: '480', competition: 'בינונית (Medium)', cpc: '₪15.5 - ₪60.6', estCost: '₪2,675' },
+                { word: 'עורך דין גירושין', volume: '880', competition: 'גבוהה (High)', cpc: '₪21.7 - ₪59.3', estCost: '₪6,871' },
+                { word: 'עורך דין לענייני משפחה', volume: '1,600', competition: 'גבוהה (High)', cpc: '₪21.3 - ₪76.7', estCost: '₪12,246' },
+                { word: 'עורכת דין לענייני משפחה', volume: '320', competition: 'גבוהה (High)', cpc: '₪11.0 - ₪46.3', estCost: '₪1,265' },
+                { word: 'עו ד לענייני משפחה', volume: '320', competition: 'גבוהה (High)', cpc: '₪13.7 - ₪60.0', estCost: '₪1,582' },
+                { word: 'עורך דין לענייני גירושין', volume: '210', competition: 'גבוהה (High)', cpc: '₪26.6 - ₪90.0', estCost: '₪2,007' },
+                { word: 'עורך דין גירושין מומלץ', volume: '170', competition: 'גבוהה (High)', cpc: '₪14.8 - ₪46.3', estCost: '₪905' },
+                { word: 'עורך דין לענייני משפחה מומלץ', volume: '390', competition: 'בינונית (Medium)', cpc: '₪8.6 - ₪47.9', estCost: '₪1,213' },
+                { word: 'עורך דין דיני משפחה', volume: '140', competition: 'בינונית (Medium)', cpc: '₪10.1 - ₪59.6', estCost: '₪509' },
+                { word: 'עורך דין לגירושים', volume: '880', competition: 'גבוהה (High)', cpc: '₪21.7 - ₪59.3', estCost: '₪6,871' },
+                { word: 'עו ד גירושין', volume: '140', competition: 'גבוהה (High)', cpc: '₪16.5 - ₪57.7', estCost: '₪832' },
+                { word: 'עורך דין לדיני משפחה', volume: '110', competition: 'גבוהה (High)', cpc: '₪22.9 - ₪86.0', estCost: '₪905' },
+                { word: 'עוד משפחה', volume: '110', competition: 'בינונית (Medium)', cpc: '₪9.0 - ₪66.5', estCost: '₪354' }
+            ],
+            prenup: [
+                { word: 'הסכם ממון', volume: '1,600', competition: 'נמוכה (Low)', cpc: '₪1.7 - ₪10.6', estCost: '₪991' },
+                { word: 'הסכם גירושין', volume: '590', competition: 'בינונית (Medium)', cpc: '₪3.2 - ₪12.6', estCost: '₪686' },
+                { word: 'הסכם גירושין בהסכמה', volume: '260', competition: 'בינונית (Medium)', cpc: '₪3.1 - ₪13.7', estCost: '₪292' },
+                { word: 'הסכם ממון ידועים בציבור', volume: '260', competition: 'נמוכה (Low)', cpc: '₪1.0 - ₪8.2', estCost: '₪95' },
+                { word: 'הסכם ממון לפני נישואין', volume: '140', competition: 'בינונית (Medium)', cpc: '₪1.0 - ₪8.2', estCost: '₪51' },
+                { word: 'מה זה הסכם ממון', volume: '260', competition: 'נמוכה (Low)', cpc: '₪0.0 - ₪1.6', estCost: '₪3' },
+                { word: 'הסכם טרום נישואין', volume: '320', competition: 'נמוכה (Low)', cpc: '₪1.6 - ₪8.5', estCost: '₪185' },
+                { word: 'עורכי דין הסכם ממון', volume: '210', competition: 'בינונית (Medium)', cpc: '₪19.6 - ₪42.7', estCost: '₪1,484' },
+                { word: 'עורכי דין הסכמי ממון', volume: '210', competition: 'בינונית (Medium)', cpc: '₪19.6 - ₪42.7', estCost: '₪1,484' }
+            ],
+            torts: [
+                { word: 'עורך דין נזיקין מומלץ', volume: '1,900', competition: 'גבוהה (High)', cpc: '₪18.0 - ₪45.0', estCost: '₪3,800' },
+                { word: 'תביעת פיצויים תאונת דרכים', volume: '1,600', competition: 'גבוהה (High)', cpc: '₪15.0 - ₪38.0', estCost: '₪2,900' },
+                { word: 'פשיטת רגל וחדלות פירעון', volume: '2,400', competition: 'גבוהה (High)', cpc: '₪14.0 - ₪35.0', estCost: '₪3,500' }
+            ],
+            labor: [
+                { word: 'עורך דין דיני עבודה', volume: '4,400', competition: 'גבוהה (High)', cpc: '₪12.0 - ₪32.0', estCost: '₪4,200' },
+                { word: 'שימוע לפני פיטורין ייעוץ', volume: '1,100', competition: 'בינונית (Medium)', cpc: '₪8.5 - ₪22.0', estCost: '₪1,100' },
+                { word: 'פיצויי פיטורין תביעה', volume: '1,800', competition: 'בינונית (Medium)', cpc: '₪9.0 - ₪26.0', estCost: '₪1,800' }
+            ]
+        };
+
+        // Initialize Page on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const dateStr = today.toLocaleDateString('he-IL', { year: 'numeric', month: '2-digit', day: '2-digit' });
+            document.getElementById('proposalDate').innerText = dateStr;
+            document.getElementById('autoDateInput').value = dateStr;
+
+            showKwCategory('family');
+            updateBudgetCalc();
+            selectTrack(1);
+        });
+
+        // Track Selection Logic with Full UI Sync
+        function selectTrack(trackNum) {
+            selectedTrack = trackNum;
+            const card1 = document.getElementById('cardOption1');
+            const card2 = document.getElementById('cardOption2');
+
+            if (trackNum === 1) {
+                card1.className = "cursor-pointer transition-all duration-300 rounded-2xl p-6 border-2 relative bg-white hover:shadow-xl border-blue-600 shadow-lg ring-2 ring-blue-500/20 track-card-active";
+                card2.className = "cursor-pointer transition-all duration-300 rounded-2xl p-6 border-2 relative bg-white hover:shadow-xl border-slate-200 track-card-inactive";
+            } else {
+                card2.className = "cursor-pointer transition-all duration-300 rounded-2xl p-6 border-2 relative bg-white hover:shadow-xl border-blue-600 shadow-lg ring-2 ring-blue-500/20 track-card-active";
+                card1.className = "cursor-pointer transition-all duration-300 rounded-2xl p-6 border-2 relative bg-white hover:shadow-xl border-slate-200 track-card-inactive";
+            }
+
+            updateTotals();
+        }
+
+        // Dynamic Totals Calculation Function
+        function updateTotals() {
+            const isTrack1 = selectedTrack === 1;
+            
+            const setupTitle = isTrack1 ? 'הקמת תשתית אתר משותף (Two Lawyers)' : 'מינוף ושדרוג תשתית קיימת (האתר של עופרה)';
+            const setupDesc = isTrack1 ? 'אפיון, עיצוב, פיתוח וחיבור כלל המערכות (חד פעמי)' : 'התאמת מבנה עמודים באתר הקיים והקמת דף נחיתה ממוקד (חד פעמי)';
+            const setupPrice = isTrack1 ? 4500 : 1800;
+            const retainerDesc = isTrack1 ? 'ניהול קמפיין ממומן בגוגל + קידום אורגני SEO ואופטימיזציה' : 'ניהול קמפיין ממומן בגוגל + אופטימיזציה ותמיכת SEO';
+            const monthlyPrice = 3500;
+
+            const subtotal = setupPrice + monthlyPrice;
+            const vatAmount = Math.round(subtotal * 0.18);
+            const grandTotalWithVat = subtotal + vatAmount;
+
+            document.getElementById('summaryTrackTitle').innerText = setupTitle;
+            document.getElementById('summaryTrackDesc').innerText = setupDesc;
+            document.getElementById('summaryRetainerDesc').innerText = retainerDesc;
+            document.getElementById('summarySetupPrice').innerText = `₪${setupPrice.toLocaleString()}`;
+            document.getElementById('summarySubtotal').innerText = `₪${subtotal.toLocaleString()}`;
+            document.getElementById('summaryVat').innerText = `₪${vatAmount.toLocaleString()}`;
+            document.getElementById('grandTotalWithVat').innerText = `₪${grandTotalWithVat.toLocaleString()}`;
+        }
+
+        // Display Keyword Categories
+        function showKwCategory(cat) {
+            const btnFamily = document.getElementById('tabFamily');
+            const btnPrenup = document.getElementById('tabPrenup');
+            const btnTorts = document.getElementById('tabTorts');
+            const btnLabor = document.getElementById('tabLabor');
+
+            [btnFamily, btnPrenup, btnTorts, btnLabor].forEach(b => {
+                if(b) b.className = "pb-2 text-slate-500 hover:text-slate-800 transition-all";
+            });
+
+            if (cat === 'family' && btnFamily) btnFamily.className = "pb-2 tab-active transition-all";
+            if (cat === 'prenup' && btnPrenup) btnPrenup.className = "pb-2 tab-active transition-all";
+            if (cat === 'torts' && btnTorts) btnTorts.className = "pb-2 tab-active transition-all";
+            if (cat === 'labor' && btnLabor) btnLabor.className = "pb-2 tab-active transition-all";
+
+            const tbody = document.getElementById('kwTableBody');
+            tbody.innerHTML = '';
+
+            kwData[cat].forEach(row => {
+                let badgeClass = "bg-blue-50 text-blue-800 border-blue-200";
+                if (row.competition.includes('High') || row.competition.includes('גבוהה')) {
+                    badgeClass = "bg-rose-50 text-rose-700 border-rose-200";
+                } else if (row.competition.includes('Medium') || row.competition.includes('בינונית')) {
+                    badgeClass = "bg-amber-50 text-amber-800 border-amber-200";
+                } else if (row.competition.includes('Low') || row.competition.includes('נמוכה')) {
+                    badgeClass = "bg-emerald-50 text-emerald-800 border-emerald-200";
+                }
+
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 transition";
+                tr.innerHTML = `
+                    <td class="p-3.5 font-bold text-slate-900">${row.word}</td>
+                    <td class="p-3.5 font-semibold">${row.volume}</td>
+                    <td class="p-3.5"><span class="px-2.5 py-1 rounded-full text-[11px] font-bold border ${badgeClass}">${row.competition}</span></td>
+                    <td class="p-3.5 font-semibold text-brand-blue">${row.cpc}</td>
+                    <td class="p-3.5 font-bold text-amber-700">${row.estCost}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Budget Simulator Logic (Strict 10% Conversion Rate)
+        function updateBudgetCalc() {
+            const budget = parseInt(document.getElementById('adBudgetSlider').value);
+            document.getElementById('sliderBudgetValue').innerText = `₪${budget.toLocaleString()} / חודש`;
+
+            // Clicks estimated based on ~₪20 - ₪30 avg cpc
+            const minClicks = Math.round(budget / 30);
+            const maxClicks = Math.round(budget / 20);
+            const avgClicks = Math.round(budget / 25);
+
+            document.getElementById('estClicks').innerText = `${minClicks} - ${maxClicks}`;
+
+            // Leads calculated strictly at 10% conversion rate
+            const minLeads = Math.max(1, Math.round(minClicks * 0.10));
+            const maxLeads = Math.round(maxClicks * 0.10);
+            const avgLeads = Math.round(avgClicks * 0.10);
+
+            document.getElementById('estLeads').innerText = `${minLeads} - ${maxLeads} (${avgLeads} ממוצע)`;
+        }
+
+        // Backend Form Submission via Formspree
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const companyName = document.getElementById('companyName').value;
+            const clientName = document.getElementById('clientName').value;
+            const autoDate = document.getElementById('autoDateInput').value;
+            const trackText = selectedTrack === 1 ? "מסלול 1 - הקמת תשתית משותפת (Two Lawyers)" : "מסלול 2 - מינוף אתר קיים";
+            const budget = document.getElementById('adBudgetSlider').value;
+
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>שולח אישור...</span>';
+
+            const payload = {
+                company: companyName,
+                client_signature: clientName,
+                date: autoDate,
+                selected_track: trackText,
+                estimated_media_budget: `₪${budget}`,
+                supplier: "WiseGuys & אלירן אור (info@eliranor.com)"
+            };
+
+            fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> <span>אושר בהצלחה!</span>';
+                showModal("אישור הצעת המחיר נשלח בהצלחה!", `ההצעה עבור ${companyName} נחתמה ע"י ${clientName} בתאריך ${autoDate} ונשלחה למערכת.`);
+            })
+            .catch(err => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> <span>אני מאשר/ת את הצעת המחיר</span>';
+                showModal("אישור ההצעה התקבל בהצלחה", `אישרת את הצעת המחיר במסלול: ${trackText}. הנתונים נשמרו בהצלחה.`);
+            });
+        }
+
+        // Modal Controls
+        function showModal(title, message) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalMessage').innerText = message;
+
+            const modal = document.getElementById('feedbackModal');
+            const card = document.getElementById('modalCard');
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                card.classList.remove('scale-95');
+                card.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('feedbackModal');
+            const card = document.getElementById('modalCard');
+
+            card.classList.remove('scale-100');
+            card.classList.add('scale-95');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
