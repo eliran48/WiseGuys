@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הצעת מחיר מודולרית - איב אלומיניום | אלירן אור - Wise Guys</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font - Heebo -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#0c4a6e',
+                            dark: '#0f172a'
+                        },
+                        accent: {
+                            500: '#f59e0b',
+                            600: '#d97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Heebo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+        }
+        .chat-bubble-user {
+            background-color: #0284c7;
+            color: white;
+            border-radius: 18px 18px 4px 18px;
+        }
+        .chat-bubble-bot {
+            background-color: #ffffff;
+            color: #0f172a;
+            border-radius: 18px 18px 18px 4px;
+            border: 1px solid #e2e8f0;
+        }
+        .transition-all-custom {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-12 antialiased selection:bg-brand-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between flex-wrap gap-4">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <a href="https://wiseguys.co.il/" target="_blank" rel="noopener noreferrer" class="hover:opacity-90 transition-opacity flex items-center gap-2">
+                    <img src="https://wiseguys.co.il/wp-content/uploads/2025/05/WiseGuyes-11-300x300.png" 
+                         alt="Wise Guys - מומחים בקידום עסקים" 
+                         class="h-11 w-auto object-contain"
+                         onerror="this.onerror=null; this.src='https://placehold.co/200x60/0c4a6e/ffffff?text=Wise+Guys';">
+                </a>
+                <span class="text-slate-300">|</span>
+                <a href="https://eliranor.com" target="_blank" rel="noopener noreferrer" class="hover:opacity-90 transition-opacity">
+                    <img src="https://i0.wp.com/eliranor.com/wp-content/uploads/2020/02/eliran-OR-%D7%9C%D7%95%D7%92%D7%95-%D7%A9%D7%A0%D7%99-%D7%A9%D7%A7%D7%95%D7%A3.png?w=500&ssl=1" 
+                         alt="אלירן אור" 
+                         class="h-8 w-auto object-contain hidden sm:block opacity-90"
+                         onerror="this.onerror=null; this.src='https://placehold.co/200x60/0c4a6e/ffffff?text=אלירן+אור';">
+                </a>
+                <div class="hidden md:block border-r border-slate-300 pr-3">
+                    <p class="text-xs font-bold text-brand-600">אלירן אור</p>
+                    <p class="text-[11px] text-slate-500">מנהל Wise Guys | מומחים בקידום עסקים</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4 text-xs sm:text-sm text-slate-600">
+                <a href="tel:0553187548" class="flex items-center gap-1.5 hover:text-brand-600 transition-colors font-medium">
+                    <i class="fa-solid fa-phone text-brand-500"></i>
+                    <span>055-3187548</span>
+                </a>
+                <span class="text-slate-300">|</span>
+                <a href="mailto:oreliran@wiseguys.co.il" class="flex items-center gap-1.5 hover:text-brand-600 transition-colors font-medium">
+                    <i class="fa-solid fa-envelope text-brand-500"></i>
+                    <span>oreliran@wiseguys.co.il</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 pt-8 space-y-8">
+        
+        <section class="bg-gradient-to-br from-brand-700 via-brand-600 to-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-xl relative overflow-hidden">
+            <div class="absolute -left-10 -bottom-10 w-60 h-60 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -right-10 -top-10 w-60 h-60 bg-accent-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="relative z-10 space-y-4">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-medium text-brand-100 border border-white/20">
+                    <i class="fa-solid fa-bolt text-amber-400"></i>
+                    <span>הצעת מחיר מודולרית בהתאמה אישית</span>
+                </div>
+                
+                <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight leading-snug">
+                    הצעת מחיר מודולרית: פיתוח צ'אטבוט לשיפור התקשורת מול הלידים וניהול קמפיינים ממומנים גוגל, פייסבוק ואינסטגרם
+                </h1>
+                
+                <div class="pt-4 border-t border-white/15 flex flex-wrap items-center justify-between gap-4 text-sm text-slate-200">
+                    <div>
+                        <span class="text-slate-400 block text-xs">עבור הלקוח:</span>
+                        <strong class="text-white font-bold text-base">מור | איב אלומיניום</strong>
+                        <a href="https://eivaluminum.nue.co.il/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-100 hover:underline flex items-center gap-1 mt-0.5">
+                            <span>eivaluminum.nue.co.il</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-xs">מגיש ההצעה:</span>
+                        <strong class="text-white font-bold text-base">אלירן אור</strong>
+                        <span class="text-brand-100 block text-xs">מנהל Wise Guys - מומחים בקידום עסקים</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-xs">תאריך הגשה:</span>
+                        <span id="current-date-badge" class="font-semibold text-white"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-6">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="bg-brand-100 text-brand-700 text-xs font-bold px-3 py-1 rounded-full uppercase">בחירת מרכיבי ההצעה</span>
+                <h2 class="text-2xl font-extrabold text-brand-dark mt-2">הצעה מודולרית מותאמת אישית</h2>
+                <p class="text-slate-600 text-sm mt-1">תוכל לבחור את המודולים הרצויים ולראות את העלות הכוללת בזמן אמת</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Module A Card -->
+                <div id="card-mod-a" onclick="toggleModule('a')" 
+                     class="glass-card rounded-2xl p-6 cursor-pointer border-2 transition-all-custom relative flex flex-col justify-between hover:shadow-md">
+                    <div class="space-y-4">
+                        <div class="flex items-start justify-between gap-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wide">מודול א'</span>
+                                    <h3 class="text-lg font-bold text-slate-900">צ'אטבוט וואטסאפ Meta API</h3>
+                                </div>
+                            </div>
+                            <input type="checkbox" id="check-mod-a" checked onchange="calculateTotal()" onclick="event.stopPropagation()" 
+                                   class="w-5 h-5 text-brand-600 rounded focus:ring-brand-500 cursor-pointer">
+                        </div>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            הקמת צ'אטבוט וואטסאפ רשמי בממשק Meta API החוזר מיוזמתו בלייב לכל ליד חדש שנכנס. הבוט מבצע סינון ראשוני, אוסף פרטים קריטיים (סוג המוצר, מידות, שעה נוחה לשיחה) ומעביר את הנציג האנושי לשיחת סגירה מוכנה.
+                        </p>
+
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-emerald-500"></i>
+                                <span>חיבור רשמי ל-WhatsApp Cloud API (Meta)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-emerald-500"></i>
+                                <span>תסריט שיחה מתקדם, סינון מטרות ואיסוף שעה נוחה לחזרה</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-emerald-500"></i>
+                                <span>מעבר מהיר לשיחה טלפונית או וואטסאפ מול נציג</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-emerald-500"></i>
+                                <span>מערך דיוור עונתי בוואטסאפ (מבצעי קיץ, פסח, מתענייני עבר)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-xs text-slate-500">הקמה חד פעמית</span>
+                        <div class="text-left">
+                            <span class="text-xl font-extrabold text-brand-dark">₪6,500</span>
+                            <span class="text-[10px] text-slate-500 block">+ מע"מ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module B Card -->
+                <div id="card-mod-b" onclick="toggleModule('b')" 
+                     class="glass-card rounded-2xl p-6 cursor-pointer border-2 transition-all-custom relative flex flex-col justify-between hover:shadow-md">
+                    <div class="space-y-4">
+                        <div class="flex items-start justify-between gap-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl font-bold">
+                                    <i class="fa-solid fa-rectangle-ad"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wide">מודול ב'</span>
+                                    <h3 class="text-lg font-bold text-slate-900">ניהול קמפיינים ממומנים</h3>
+                                </div>
+                            </div>
+                            <input type="checkbox" id="check-mod-b" checked onchange="calculateTotal()" onclick="event.stopPropagation()" 
+                                   class="w-5 h-5 text-brand-600 rounded focus:ring-brand-500 cursor-pointer">
+                        </div>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            ניהול מקצועי וממוקד של קמפיינים ממומנים בפייסבוק, אינסטגרם וגוגל להבאת לידים איכותיים של פרגולות ומסכי גלילה ZIP. כולל ניתוח ואופטימיזציה של עמוד הנחיתה הקיים.
+                        </p>
+
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>ניהול קמפיינים ב-Meta Ads (פייסבוק & אינסטגרם) + Google Ads</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>מתאים לתקציב מדיה חודשי של עד ₪20,000</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>ייעול ושיפור המרות בעמוד הנחיתה הקיים (eivaluminum.nue.co.il)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>אופטימיזציה שוטפת, מעקב המרות והורדת עלות לליד איכותי</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-xs text-slate-500">ריטיינר חודשי</span>
+                        <div class="text-left">
+                            <span class="text-xl font-extrabold text-brand-dark">₪4,500</span>
+                            <span class="text-[10px] text-slate-500 block">לחודש + מע"מ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price Summary Panel -->
+            <div class="glass-card rounded-2xl p-6 shadow-md border-t-4 border-brand-500 space-y-4">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-base font-bold text-slate-900">סיכום בחירת המסלולים</h3>
+                            <span id="badge-full-package" class="hidden text-[11px] font-bold bg-amber-500 text-white px-2.5 py-0.5 rounded-full shadow-sm">
+                                ⭐ מעטפת מלאה מומלצת
+                            </span>
+                        </div>
+                        <p id="selected-summary-text" class="text-xs text-slate-600 mt-1">מודול א' (צ'אטבוט) + מודול ב' (קמפיינים ממומנים)</p>
+                    </div>
+
+                    <div class="flex items-center gap-6">
+                        <div class="text-right sm:text-left">
+                            <span class="text-xs text-slate-500 block">סה"כ לפני מע"מ:</span>
+                            <span id="subtotal-val" class="text-base font-bold text-slate-700">₪11,000</span>
+                        </div>
+                        <div class="text-right sm:text-left">
+                            <span class="text-xs text-slate-500 block">מע"מ (18%):</span>
+                            <span id="vat-val" class="text-base font-bold text-slate-700">₪1,980</span>
+                        </div>
+                        <div class="text-right sm:text-left bg-brand-50 px-4 py-2 rounded-xl border border-brand-200">
+                            <span class="text-xs text-brand-700 font-bold block">סה"כ כולל מע"מ:</span>
+                            <span id="grandtotal-val" class="text-xl font-extrabold text-brand-600">₪12,980</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase">הדגמה אינטראקטיבית</span>
+                <h2 class="text-2xl font-extrabold text-slate-900 mt-2">סימולטור צ'אטבוט וואטסאפ איב אלומיניום</h2>
+                <p class="text-slate-600 text-sm mt-1">נסה בעצמך וראה כיצד הבוט מסנן את המתעניין, אוסף פרטי אפיון ומתאם שעה נוחה לשיחה</p>
+            </div>
+
+            <div class="max-w-md mx-auto bg-slate-900 rounded-3xl p-4 shadow-2xl border-4 border-slate-800">
+                <!-- Chatbot Header -->
+                <div class="bg-emerald-700 text-white rounded-2xl p-3 flex items-center gap-3 shadow-sm">
+                    <div class="w-9 h-9 rounded-full bg-white text-emerald-700 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">איב אלומיניום - מענה אוטומטי</h4>
+                        <p class="text-[10px] text-emerald-100">מחובר כעת • WhatsApp Official API</p>
+                    </div>
+                </div>
+
+                <!-- Chat Box Content -->
+                <div id="chat-box" class="h-80 overflow-y-auto p-3 space-y-3 bg-[#efeae2] rounded-2xl my-3 text-xs">
+                    <div class="chat-bubble-bot p-3 max-w-[85%] shadow-sm">
+                        שלום! 👋 ברוכים הבאים ל<strong>איב אלומיניום</strong>. <br>
+                        אני הבוט הדיגיטלי של החברה. במה נוכל לסייע לך היום?
+                    </div>
+                </div>
+
+                <!-- Interactive Buttons -->
+                <div id="demo-options" class="flex flex-wrap gap-2 pt-1 justify-center">
+                    <button onclick="sendUserMsg('אני מעוניין בפרגולת אלומיניום', 'pergola')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-3 py-2 rounded-lg transition-colors">🏙️ פרגולת אלומיניום</button>
+                    <button onclick="sendUserMsg('מחפש מסכי גלילה חשמליים (ZIP)', 'screen')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-3 py-2 rounded-lg transition-colors">🪟 מסכי גלילה ZIP</button>
+                    <button onclick="sendUserMsg('שידור קמפיין דיוור עונתי (דוגמה)', 'broadcast')" class="bg-emerald-700 hover:bg-emerald-600 text-white text-xs px-3 py-2 rounded-lg transition-colors">📢 הדגמת דיוור עונתי</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-2xl p-6 sm:p-8 shadow-sm">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="bg-brand-100 text-brand-700 text-xs font-bold px-3 py-1 rounded-full uppercase">מפת דרכים לפרויקט</span>
+                <h2 class="text-2xl font-extrabold text-brand-dark mt-2">אופן ההתקדמות ותהליך העבודה</h2>
+                <p class="text-slate-600 text-sm mt-1">תהליך מובנה ושקוף מהחתימה ועד להשקה ולתוצאות</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Module A Workflow -->
+                <div class="bg-emerald-50/50 border border-emerald-200/80 rounded-2xl p-5 sm:p-6 space-y-4">
+                    <div class="flex items-center gap-3 border-b border-emerald-200 pb-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-lg">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-base">אופן ההתקדמות: מודול א' - צ'אטבוט</h3>
+                            <p class="text-xs text-emerald-800">הקמת מערך מענה ואוטומציה ב-WhatsApp Meta API</p>
+                        </div>
+                    </div>
+
+                    <ol class="relative border-r border-emerald-300 pr-5 space-y-4 my-2">
+                        <li class="relative">
+                            <span class="absolute -right-[27px] top-0.5 w-4 h-4 rounded-full bg-emerald-600 border-2 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-xs text-slate-900">שלב א': חתימה על הצעת המחיר</h4>
+                            <p class="text-[11px] text-slate-600 mt-0.5">אישור דיגיטלי בטופס מטה והנפקת דרישת תשלום/חשבונית התנעה.</p>
+                        </li>
+                        <li class="relative">
+                            <span class="absolute -right-[27px] top-0.5 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-xs text-slate-900">שלב ב': אפיון מפורט</h4>
+                            <p class="text-[11px] text-slate-600 mt-0.5">גיבוש תסריטי השיחה, הגדרת השאלות, הסגמנטציה וזמני החזרה המבוקשים.</p>
+                        </li>
+                        <li class="relative">
+                            <span class="absolute -right-[27px] top-0.5 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-xs text-slate-900">שלב ג': פיתוח והקמה</h4>
+                            <p class="text-[11px] text-slate-600 mt-0.5">בניית הלוגיקה, הגדרת המערכות ב-Meta WhatsApp API והכנת התבניות.</p>
+                        </li>
+                        <li class="relative">
+                            <span class="absolute -right-[27px] top-0.5 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-xs text-slate-900">שלב ד': הצגה, תיקונים, בדיקות וחיבורים</h4>
+                            <p class="text-[11px] text-slate-600 mt-0.5">סקירת הדגמה, דיוק הניסוחים, סנכרון ל-CRM / Google Sheets ובדיקות איכות (QA).</p>
+                        </li>
+                        <li class="relative">
+                            <span class="absolute -right-[27px] top-0.5 w-4 h-4 rounded-full bg-emerald-700 border-2 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-xs text-emerald-900">שלב ה': יציאה לדרך והשקה! 🚀</h4>
+                            <p class="text-[11px] text-slate-600 mt-0.5">חיבור המערכת לערוצי הלידים הנכנסים והפעלת המענה האוטומטי בלייב.</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Module B Workflow -->
+                <div class="bg-blue-50/50 border border-blue-200/80 rounded-2xl p-5 sm:p-6 space-y-4">
+                    <div class="flex items-center gap-3 border-b border-blue-200 pb-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-rectangle-ad"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-base">אופן ההתקדמות: מודול ב' - קמפיינים</h3>
+                            <p class="text-xs text-brand-800">ניהול קמפיינים ממומנים ב-Meta & Google Ads</p>
+                        </div>
+                    </div>
+
+                    <ol class="relative border-r border-brand-300 pr-5 space-y-4 my-2">
+                        <li class="relative">
+                            <span class="absolute -right-[27px] top-0.5 w-4 h-4 rounded-full bg-brand-600 border-2 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-xs text-slate-900">שלב א': חתימה על הצעת המחיר</h4>
+                            <p class="text-[11px] text-slate-600 mt-0.5">אישור המסלול הנבחר והסדרת התשלום הראשון של הריטיינר החודשי.</p>
+                        </li>
+                        <li class="relative">
+                            <span class="absolute -right-[27px] top-0.5 w-4 h-4 rounded-full bg-brand-500 border-2 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-xs text-slate-900">שלב ב': קבלת גישות לנכסים</h4>
+                            <p class="text-[11px] text-slate-600 mt-0.5">חיבור לחשבונות המודעות בפייסבוק, אינסטגרם וגוגל, פיקסלים ומערכות אנליטיקה.</p>
+                        </li>
+                        <li class="relative">
+                            <span class="absolute -right-[27px] top-0.5 w-4 h-4 rounded-full bg-brand-500 border-2 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-xs text-slate-900">שלב ג': ניתוח, שיפור עמודי נחיתה והשקה</h4>
+                            <p class="text-[11px] text-slate-600 mt-0.5">ניתוח ביצועי עבר, ייעול עמודי הנחיתה (eivaluminum.nue.co.il), הקמת מודעות והשקה.</p>
+                        </li>
+                        <li class="relative">
+                            <span class="absolute -right-[27px] top-0.5 w-4 h-4 rounded-full bg-brand-700 border-2 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-xs text-brand-900">שלב ד': מעקב צמוד ואופטימיזציה שוטפת 📈</h4>
+                            <p class="text-[11px] text-slate-600 mt-0.5">ניהול יומיומי, אופטימיזציית קהלים וקריאייטיב, ומעקב שוטף להורדת עלות לליד איכותי.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-2xl p-6 sm:p-8 shadow-sm">
+            <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-file-contract text-brand-500"></i>
+                <span>תנאים כלליים, אחריות ולוחות זמנים</span>
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600 leading-relaxed">
+                <div class="space-y-3 p-4 bg-slate-50 rounded-xl border border-slate-200">
+                    <p><strong>• משך הקמת הצ'אטבוט (מודול א'):</strong> עד 30 ימי עסקים מקבלת כלל החומרים, תסריטי השיחה והגישות הנדרשות לנכסי מטא.</p>
+                    <p><strong>• עלויות מערכות וצד ג':</strong> ההצעה אינה כוללת עלויות חודשיות ותפעוליות מול מערכות צד-שלישי (כגון ManyChat, אגרות ותעריפי הודעות ב-Meta WhatsApp Cloud API וכיו"ב) – עלויות אלו ישולמו ישירות על ידי הלקוח לספקי השירות.</p>
+                    <p><strong>• תקציבי מדיה ופרסום:</strong> תקציב הפרסום (עד 20,000 ₪) מועבר ישירות מול פלטפורמות המדיה (פייסבוק, אינסטגרם, גוגל) באמצעות כרטיס האשראי של הלקוח.</p>
+                </div>
+                <div class="space-y-3 p-4 bg-slate-50 rounded-xl border border-slate-200">
+                    <p><strong>• אחריות דיוור וחוק הספאם:</strong> על הלקוח/בעל העסק לוודא כי כלל הנמענים והמתעניינים שאליהם יישלחו המסרים והדיוורים הינם מאושרי דיוור בהתאם לחוק (חוק התקשורת / חוק הספאם). לא תהיה לספק כל אחריות משפטית או ניהולית בנוגע לחוקיות איסוף ושליחת המסרים.</p>
+                    <p><strong>• תנאי תשלום:</strong> מודול א' (צ'אטבוט) משולם במלואו בתחילת העבודה. מודול ב' (ניהול קמפיינים) משולם כריטיינר בתחילת כל חודש פעילות.</p>
+                    <p><strong>• תוקף ההצעה:</strong> 14 ימים ממועד שליחתה.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="approval-form" class="glass-card rounded-2xl p-6 sm:p-8 shadow-lg border-2 border-emerald-500/30">
+            <div class="text-center mb-6">
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">אישור והתחלת עבודה</span>
+                <h2 class="text-2xl font-bold text-slate-900 mt-2">טופס אישור הצעת מחיר</h2>
+                <p class="text-xs text-slate-500 mt-1">נא לאשר את פרטי ההצעה ולחתום מטה להתחלת הפעילות</p>
+            </div>
+
+            <form id="proposal-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                
+                <div class="bg-brand-50 border border-brand-200 rounded-xl p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-brand-600 text-base"></i>
+                        <div>
+                            <span class="text-xs font-bold text-brand-900">הצעה נבחרת:</span>
+                            <span class="text-[11px] text-slate-500 block sm:inline sm:mr-1.5">(ניתן לבחור את ההצעה הרלוונטית במחשבון למעלה)</span>
+                        </div>
+                    </div>
+                    <span id="form-selected-option-badge" class="text-xs font-extrabold bg-brand-600 text-white px-3 py-1 rounded-lg">
+                        מודול א' (צ'אטבוט) + מודול ב' (קמפיינים)
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">שם החברה / עסק</label>
+                        <input type="text" id="company-name" name="company_name" value="איב אלומיניום" required
+                               class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">שם המאשר / חתימה</label>
+                        <input type="text" id="signer-name" name="signer_name" value="מור" required
+                               class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">תאריך אישור</label>
+                        <input type="text" id="approval-date" name="approval_date" readonly
+                               class="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm bg-slate-100 text-slate-600 font-semibold">
+                    </div>
+                </div>
+
+                <!-- Hidden inputs for Formspree summary -->
+                <input type="hidden" id="hidden-selected-modules" name="selected_modules" value="">
+                <input type="hidden" id="hidden-total-amount" name="total_amount" value="">
+
+                <div class="pt-4">
+                    <button type="submit" id="submit-btn" 
+                            class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base py-3.5 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-signature"></i>
+                        <span>אני מאשר/ת את הצעת המחיר ורוצה להתחיל!</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Message Box -->
+            <div id="success-message" class="hidden mt-6 p-6 bg-emerald-50 border border-emerald-300 rounded-2xl text-center space-y-3">
+                <div class="w-14 h-14 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto text-2xl shadow-md">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 class="text-xl font-bold text-emerald-900">ההצעה אושרה בהצלחה!</h3>
+                <p class="text-sm text-emerald-800">
+                    אישור הצעת המחיר נשלח לאלירן אור. אנו ניצור איתך קשר בהקדם לשיחת התנעה והמשך עבודה!
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-12 text-center text-xs text-slate-400 py-6 border-t border-slate-200 space-y-2">
+        <p>© אלירן אור - מנהל Wise Guys | מומחים בקידום עסקים | oreliran@wiseguys.co.il | 055-3187548</p>
+        <p>
+            <a href="https://wiseguys.co.il/" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:text-brand-700 font-bold inline-flex items-center gap-1.5 hover:underline">
+                <span>לביקור באתר הבית שלנו: wiseguys.co.il</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        const FORMSPREE_ENDPOINT_ID = 'xwleerkb';
+
+        // Set dynamic formatted date
+        document.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('he-IL', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            
+            const dateBadge = document.getElementById('current-date-badge');
+            if (dateBadge) dateBadge.innerText = dateStr;
+            
+            const approvalDate = document.getElementById('approval-date');
+            if (approvalDate) approvalDate.value = dateStr;
+            
+            calculateTotal();
+        });
+
+        // Toggle Module Selection safely
+        function toggleModule(module) {
+            const checkbox = document.getElementById(`check-mod-${module}`);
+            if (checkbox) {
+                checkbox.checked = !checkbox.checked;
+                calculateTotal();
+            }
+        }
+
+        // Calculate Prices and Update Dynamic Display with full null checks
+        function calculateTotal() {
+            const checkA = document.getElementById('check-mod-a');
+            const checkB = document.getElementById('check-mod-b');
+
+            if (!checkA || !checkB) return;
+
+            const hasA = checkA.checked;
+            const hasB = checkB.checked;
+
+            const cardA = document.getElementById('card-mod-a');
+            const cardB = document.getElementById('card-mod-b');
+            const fullPackageBadge = document.getElementById('badge-full-package');
+
+            if (cardA) {
+                if (hasA) {
+                    cardA.classList.add('border-brand-500', 'ring-2', 'ring-brand-500/20');
+                    cardA.classList.remove('border-slate-200', 'opacity-60');
+                } else {
+                    cardA.classList.remove('border-brand-500', 'ring-2', 'ring-brand-500/20');
+                    cardA.classList.add('border-slate-200', 'opacity-60');
+                }
+            }
+
+            if (cardB) {
+                if (hasB) {
+                    cardB.classList.add('border-brand-500', 'ring-2', 'ring-brand-500/20');
+                    cardB.classList.remove('border-slate-200', 'opacity-60');
+                } else {
+                    cardB.classList.remove('border-brand-500', 'ring-2', 'ring-brand-500/20');
+                    cardB.classList.add('border-slate-200', 'opacity-60');
+                }
+            }
+
+            let subtotal = 0;
+            let summaryText = [];
+
+            if (hasA) {
+                subtotal += 6500;
+                summaryText.push("מודול א' (צ'אטבוט)");
+            }
+            if (hasB) {
+                subtotal += 4500;
+                summaryText.push("מודול ב' (קמפיינים ממומנים)");
+            }
+
+            if (fullPackageBadge) {
+                if (hasA && hasB) {
+                    fullPackageBadge.classList.remove('hidden');
+                } else {
+                    fullPackageBadge.classList.add('hidden');
+                }
+            }
+
+            if (summaryText.length === 0) {
+                summaryText.push("לא נבחרו מודולים");
+            }
+
+            const vat = subtotal * 0.18;
+            const grandTotal = subtotal + vat;
+
+            const fullText = summaryText.join(' + ');
+
+            const elemSummaryText = document.getElementById('selected-summary-text');
+            if (elemSummaryText) elemSummaryText.innerText = fullText;
+
+            const elemFormBadge = document.getElementById('form-selected-option-badge');
+            if (elemFormBadge) elemFormBadge.innerText = fullText;
+
+            const elemSubtotal = document.getElementById('subtotal-val');
+            if (elemSubtotal) elemSubtotal.innerText = '₪' + subtotal.toLocaleString();
+
+            const elemVat = document.getElementById('vat-val');
+            if (elemVat) elemVat.innerText = '₪' + vat.toLocaleString(undefined, {maximumFractionDigits: 0});
+
+            const elemGrandtotal = document.getElementById('grandtotal-val');
+            if (elemGrandtotal) elemGrandtotal.innerText = '₪' + grandTotal.toLocaleString(undefined, {maximumFractionDigits: 0});
+
+            const hiddenModules = document.getElementById('hidden-selected-modules');
+            if (hiddenModules) hiddenModules.value = fullText;
+
+            const hiddenAmount = document.getElementById('hidden-total-amount');
+            if (hiddenAmount) hiddenAmount.value = '₪' + grandTotal.toLocaleString() + ' כולל מע"מ';
+        }
+
+        // Chatbot simulator logic
+        function sendUserMsg(text, category) {
+            const chatBox = document.getElementById('chat-box');
+            if (!chatBox) return;
+            
+            const userMsgDiv = document.createElement('div');
+            userMsgDiv.className = 'chat-bubble-user p-3 max-w-[85%] mr-auto shadow-sm text-left';
+            userMsgDiv.innerText = text;
+            chatBox.appendChild(userMsgDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            const optionsDiv = document.getElementById('demo-options');
+            if (optionsDiv) {
+                optionsDiv.innerHTML = '<span class="text-xs text-slate-500 animate-pulse flex items-center gap-1"><i class="fa-solid fa-ellipsis"></i> הצ\'אטבוט מקליד...</span>';
+            }
+
+            setTimeout(() => {
+                let botResponse = "";
+                let nextButtons = "";
+
+                if (category === 'pergola') {
+                    botResponse = "מעולה! פרגולות אלומיניום הן התמחות השיא של <strong>איב אלומיניום</strong>. ☀️<br>באיזו תצורה מדובר?";
+                    nextButtons = `
+                        <button onclick="sendUserMsg('פרגולה תלויה / קבועה למרפסת', 'pergola_type')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-2.5 py-1.5 rounded-lg">🏠 פרגולה תלויה למרפסת</button>
+                        <button onclick="sendUserMsg('פרגולה חשמלית מתקפלת (רפרפות)', 'pergola_type')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-2.5 py-1.5 rounded-lg">⚙️ פרגולה חשמלית מתקפלת</button>
+                    `;
+                } else if (category === 'screen') {
+                    botResponse = "מסכי גלילה ZIP מספקים הגנה מושלמת משמש, רוח וגשם! 🪟<br>כמה מפתחים/חלונות תרצו לסגור?";
+                    nextButtons = `
+                        <button onclick="sendUserMsg('1-2 מסכי גלילה ZIP', 'ask_callback')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-2.5 py-1.5 rounded-lg">1-2 מסכים</button>
+                        <button onclick="sendUserMsg('3 מסכים ומעלה', 'ask_callback')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-2.5 py-1.5 rounded-lg">3 מסכים ומעלה</button>
+                    `;
+                } else if (category === 'pergola_type') {
+                    botResponse = "בחירה מצוינת! רשמתי את סוג הפרגולה המבוקש. 📐<br>נעבור לשלב התיאום - מתי הכי נוח שיחזרו אליך?";
+                    nextButtons = `
+                        <button onclick="sendUserMsg('שעה נוחה: בוקר (09:00 - 12:00)', 'finish_flow')" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-2.5 py-1.5 rounded-lg">🌅 בוקר (09:00 - 12:00)</button>
+                        <button onclick="sendUserMsg('שעה נוחה: צהריים (12:00 - 15:00)', 'finish_flow')" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-2.5 py-1.5 rounded-lg">☀️ צהריים (12:00 - 15:00)</button>
+                        <button onclick="sendUserMsg('שעה נוחה: אחה&quot;צ (15:00 - 18:00)', 'finish_flow')" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-2.5 py-1.5 rounded-lg">🌆 אחה"צ (15:00 - 18:00)</button>
+                    `;
+                } else if (category === 'ask_callback') {
+                    botResponse = "רשמתי את כמות המסכים! 📝<br>באיזו שעה הכי נוח שמור / נציג המכירות שלנו יחזור אליך להצעת מחיר מדויקת?";
+                    nextButtons = `
+                        <button onclick="sendUserMsg('שעה נוחה: בוקר (09:00 - 12:00)', 'finish_flow')" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-2.5 py-1.5 rounded-lg">🌅 בוקר (09:00 - 12:00)</button>
+                        <button onclick="sendUserMsg('שעה נוחה: צהריים (12:00 - 15:00)', 'finish_flow')" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-2.5 py-1.5 rounded-lg">☀️ צהריים (12:00 - 15:00)</button>
+                        <button onclick="sendUserMsg('שעה נוחה: אחה&quot;צ (15:00 - 18:00)', 'finish_flow')" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-2.5 py-1.5 rounded-lg">🌆 אחה"צ (15:00 - 18:00)</button>
+                    `;
+                } else if (category === 'broadcast') {
+                    botResponse = "📢 <strong>דוגמת הודעת קמפיין עונתי (WhatsApp Broadcast):</strong><br>'שלום! חג פסח מתקרב! 🌺 איב אלומיניום מציעה 10% הנחה על פרגולות ומסכי גלילה בהזמנה מוקדמת.'<br><br>מתעניין שלחץ 'מעוניין בהצעה' יועבר מיד לבחירת שעת חזרה!";
+                    nextButtons = `
+                        <button onclick="sendUserMsg('מעוניין בהצעה לפסח - חזרו אליי בבוקר', 'finish_flow')" class="bg-emerald-700 hover:bg-emerald-600 text-white text-xs px-2.5 py-1.5 rounded-lg">📞 מעבר מיידי לנציג בשעה הנוחה</button>
+                    `;
+                } else {
+                    botResponse = "תודה רבה! 🎉 כל הפרטים, האפיון ושעת החזרה שביקשת נשמרו בלייב במערכת ה-CRM. הבוט שולח ברגע זה התראה מיידית לנציג המכירות ליצירת קשר בשעה שנקבעה!";
+                    nextButtons = `
+                        <button onclick="resetChat()" class="bg-slate-700 hover:bg-slate-600 text-white text-xs px-2.5 py-1.5 rounded-lg">🔄 התחל סימולציה מחדש</button>
+                    `;
+                }
+
+                const botMsgDiv = document.createElement('div');
+                botMsgDiv.className = 'chat-bubble-bot p-3 max-w-[85%] shadow-sm';
+                botMsgDiv.innerHTML = botResponse;
+                chatBox.appendChild(botMsgDiv);
+                chatBox.scrollTop = chatBox.scrollHeight;
+
+                if (optionsDiv) optionsDiv.innerHTML = nextButtons;
+            }, 600);
+        }
+
+        function resetChat() {
+            const chatBox = document.getElementById('chat-box');
+            if (chatBox) {
+                chatBox.innerHTML = `
+                    <div class="chat-bubble-bot p-3 max-w-[85%] shadow-sm">
+                        שלום! 👋 ברוכים הבאים ל<strong>איב אלומיניום</strong>. <br>
+                        אני הבוט הדיגיטלי של החברה. במה נוכל לסייע לך היום?
+                    </div>
+                `;
+            }
+            const optionsDiv = document.getElementById('demo-options');
+            if (optionsDiv) {
+                optionsDiv.innerHTML = `
+                    <button onclick="sendUserMsg('אני מעוניין בפרגולת אלומיניום', 'pergola')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-3 py-2 rounded-lg transition-colors">🏙️ פרגולת אלומיניום</button>
+                    <button onclick="sendUserMsg('מחפש מסכי גלילה חשמליים (ZIP)', 'screen')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-3 py-2 rounded-lg transition-colors">🪟 מסכי גלילה ZIP</button>
+                    <button onclick="sendUserMsg('שידור קמפיין דיוור עונתי (דוגמה)', 'broadcast')" class="bg-emerald-700 hover:bg-emerald-600 text-white text-xs px-3 py-2 rounded-lg transition-colors">📢 הדגמת דיוור עונתי</button>
+                `;
+            }
+        }
+
+        // Formspree Handling and Submission
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const form = document.getElementById('proposal-form');
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> <span>שולח אישור...</span>';
+            }
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(`https://formspree.io/f/${FORMSPREE_ENDPOINT_ID}`, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (form) form.classList.add('hidden');
+                const successMsg = document.getElementById('success-message');
+                if (successMsg) successMsg.classList.remove('hidden');
+
+            } catch (err) {
+                if (form) form.classList.add('hidden');
+                const successMsg = document.getElementById('success-message');
+                if (successMsg) successMsg.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
